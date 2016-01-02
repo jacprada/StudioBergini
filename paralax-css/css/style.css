@@ -56,18 +56,18 @@ div.centered {
   padding-bottom: 150px;
 }
 
-.parallax {
-/*  position: absolute;
+/*.parallax {
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  padding-bottom: 150px;*/
+  padding-bottom: 150px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
 }
-
+*/
 nav {
   z-index: 2;
   background-color: black;
@@ -189,12 +189,12 @@ p {
  transform: translate(-50%, -50%);
 }
 
-/*.parallax {
+.parallax {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
-}*/
+}
 
 .parallax_layer {
   position: absolute;
@@ -227,6 +227,7 @@ p {
 .parallax-group {
   position: relative;
   height: 100vh;
+/*  height: calc(100vh - 50px);*/
   transform-style: preserve-3d;
   -webkit-transform-style: preserve 3d;
   transition: transform 0.5s;
