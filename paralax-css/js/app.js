@@ -11,6 +11,10 @@ function initialize() {
       openMenu();
     }
   });
+
+  $('.close').on('click', function() {
+      closeMenu();
+  });
 }
 
 function openMenu() {
