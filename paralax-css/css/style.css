@@ -83,8 +83,8 @@ li {
   line-height: 65px;
 }
 
-.fa-bars {
-  font-size: 25px;
+.fa-arrow-right {
+  font-size: 20px;
   color: #fff;
 
   float: left;
@@ -272,4 +272,15 @@ p {
 
 #section5 .parallax_layer-base {
   background: #B42B3F;
+}
+
+@media only screen and (max-width: 690px) {
+  
+  div.sidebar {
+/*    width: 100vh;*/
+
+/*    position: absolute;
+      left: -690px;
+      top: 0;*/
+  }
 }

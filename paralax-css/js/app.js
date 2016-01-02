@@ -3,7 +3,7 @@ $(initialize)
 function initialize() {
   // $('.sidebar').hide();
 
-  $('.fa-bars').on('click', function() {
+  $('.fa-arrow-right').on('click', function() {
     console.log('click')
     if( $(this).hasClass('open-menu')) {
       closeMenu();
@@ -18,16 +18,18 @@ function initialize() {
 }
 
 function openMenu() {
-  $('.fa-bars').removeClass('close-menu');
-  $('.fa-bars').addClass('open-menu');
+  $('.fa-arrow-right').removeClass('close-menu');
+  $('.fa-arrow-right').addClass('open-menu');
   $('.sidebar').css('left', '0px');
+  // $('.content').css('width', '100%').css('width', '-=300px');
 }
 
 function closeMenu() {
   $('.sidebar').show();
 
-  $('.fa-bars').removeClass('open-menu');
-  $('.fa-bars').addClass('close-menu');
+  $('.fa-arrow-right').removeClass('open-menu');
+  $('.fa-arrow-right').addClass('close-menu');
 
   $('.sidebar').css('left', '-300px');
+  // $('.content').css('width', '100%');
 }
