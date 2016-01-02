@@ -40,6 +40,7 @@ div.sidebar {
   height: 100vh;
 
   background: red;
+  background-color: rgba(0, 0, 0, 0.8);
 
   position: absolute;
     left: -300px;
