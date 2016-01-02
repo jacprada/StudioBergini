@@ -1530,6 +1530,15 @@ ul#filters li button.btn-link.active {
   margin: 0 auto;
   padding: 10px 30px;
 }
+.portfolio-2 #portfolio-2-1-carousel .item img {
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+.portfolio-2 #portfolio-2-2-carousel .item img {
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+
 .portfolio-2 .owl-theme .owl-controls .owl-buttons div {
   position: absolute;
 }
@@ -1555,6 +1564,13 @@ ul#filters li button.btn-link.active {
   .portfolio-2 #portfolio-2-carousel .item img {
     max-width: 725px;
   }
+  .portfolio-2 #portfolio-2-1-carousel .item img {
+    max-width: 725px;
+  }
+  .portfolio-2 #portfolio-2-2-carousel .item img {
+    max-width: 725px;
+  }
+
 }
 .pricing-col {
   max-width: 400px;
@@ -2831,4 +2847,19 @@ p.demo-text {
   font-family: 'Pacifico', serif;
   margin-top: 20px;
   font-size: 25px;
+}
+
+div.sidebar {
+  z-index: 5;
+
+  width: 300px;
+  height: 100%;
+
+  background: red;
+
+  position: absolute;
+    left: -300px;
+    top: 0;
+
+  -webkit-transition: left 0.5s;
 }

@@ -82,6 +82,31 @@ jQuery(document).ready(function() {
 
     });
 
+    $("#portfolio-2-1-carousel").owlCarousel({
+
+        singleItem: true,
+        navigation: true,
+        navigationText: [
+            "<i class='fa fa-chevron-left'></i>",
+            "<i class='fa fa-chevron-right'></i>"
+        ],
+        slideSpeed: 400
+
+    });
+
+    $("#portfolio-2-2-carousel").owlCarousel({
+
+        singleItem: true,
+        navigation: true,
+        navigationText: [
+            "<i class='fa fa-chevron-left'></i>",
+            "<i class='fa fa-chevron-right'></i>"
+        ],
+        slideSpeed: 400
+
+    });
+
+
     $("#project-details-carousel").owlCarousel({
 
         navigation: true,
