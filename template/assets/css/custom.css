@@ -1,3 +1,7 @@
+body {
+  font-family: "Times New Roman", Serif;
+}
+
 #header-custom {
   background-color: #050505;
 }
@@ -5,6 +9,13 @@
 #overlay-custom {
   background-image: none;
   opacity: 0;
+}
+
+#title-custom {
+  font-size: 200px;
+  line-height: 300px;
+  text-transform: capitalize;
+  text-shadow: none;
 }
 
 /*div.container {
