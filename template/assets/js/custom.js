@@ -26,16 +26,25 @@ $( document ).ready(function() {
       alternateColor()
     }
 
-    function alternateColor(){
-      console.log("running")
-      if(introColor == "black" && !($("#nav-custom").hasClass("top-nav-collapse"))) {
-        console.log("it's black")
-        setTimeout(introToWhite, 2000);
-      } else if(introColor == "white") {
-        console.log("it's white")
-        setTimeout(introToBlack, 2000);
+    // function alternateColor(){
+    //   console.log("running")
+    //   if(introColor == "black" && !($("#nav-custom").hasClass("top-nav-collapse"))) {
+    //     console.log("it's black")
+    //     setTimeout(introToWhite, 2000);
+    //   } else if(introColor == "white") {
+    //     console.log("it's white")
+    //     setTimeout(introToBlack, 2000);
+    //   }
+    // }
+
+    function checkHeader(){
+      if($("#nav-custom").hasClass("top-nav-collapse")){
+        console.log('hello');
+
+        $("#nav-custom").css("background-color", "red");
       }
     }
+
 
     // var test = $("#nav-custom")
 
@@ -51,13 +60,13 @@ $( document ).ready(function() {
     //   }
     // }
 
-    setInterval(alternateColor, 100);
+    // setInterval(alternateColor, 100);
+    // setInterval(checkHeader, 100);
+    $(window).scroll(checkHeader) 
+
 
     
-
-
-    
-    // $(window).scroll(checkColor) 
+    $(window).scroll(checkHeader) 
 
 
 });
