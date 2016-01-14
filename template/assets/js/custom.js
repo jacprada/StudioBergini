@@ -37,13 +37,13 @@ $( document ).ready(function() {
     //   }
     // }
 
-    function checkHeader(){
-      if($("#nav-custom").hasClass("top-nav-collapse")){
-        console.log('hello');
+    // function checkHeader(){
+    //   if($("#nav-custom").hasClass("top-nav-collapse")){
+    //     console.log('hello');
 
-        $("#nav-custom").css("background-color", "red");
-      }
-    }
+    //     $("#nav-custom").css("background-color", "red");
+    //   }
+    // }
 
 
     // var test = $("#nav-custom")
@@ -62,11 +62,11 @@ $( document ).ready(function() {
 
     // setInterval(alternateColor, 100);
     // setInterval(checkHeader, 100);
-    $(window).scroll(checkHeader) 
+    // $(window).scroll(checkHeader) 
 
 
     
-    $(window).scroll(checkHeader) 
+    // $(window).scroll(checkHeader) 
 
 
 });
