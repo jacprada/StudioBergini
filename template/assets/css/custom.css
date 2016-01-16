@@ -22,6 +22,11 @@ body {
   border: none;
 }
 
+#nav-custom.top-nav-collapse li a {
+  color: #FFFFFF;
+}
+
+
 .navbar-nav>li>a {
   font-weight: 500;
   font-size: 18px;
@@ -31,13 +36,14 @@ body {
 }
 
 .navbar-dark .nav li a {
-  color: #FFFFFF;
+  color: #c8cdd7;
   padding-bottom: 5px;
 }
 
 .navbar-dark .nav li.active a {
-  color: red !important;
+  color: #c8cdd7 !important;
 }
+
 .navbar-dark.top-nav-collapse .nav li a:after {
   margin-top: -5px;
   background-color: #F0F0F0;
@@ -94,6 +100,7 @@ section {
 h2.section-title {
   font-family: "Times New Roman", Serif;
   color: #333333;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
