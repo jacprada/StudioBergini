@@ -51,12 +51,16 @@ body {
   padding-bottom: 5px;
 }
 
-.archives-navbar .nav li a:after {
-  background-color: #191919; 
+.archives-navbar .nav li a:hover {
+  color: #191919;
+  
 }
 
+.navbar-dark.nav-archives  .nav li a:after {
+  background-color: #191919; 
+}
 .navbar-dark .nav li a:after {
- background-color: #FFFFFF; 
+ background-color: #fff; 
 }
 
 
