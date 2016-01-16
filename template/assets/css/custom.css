@@ -7,10 +7,6 @@ body {
 
 /*Navbar*/
 
-#header-custom {
-  background-color: #050505;
-}
-
 #nav-custom {
   font-family: "Times New Roman", Serif;
   height: 60px;
@@ -36,12 +32,12 @@ body {
 }
 
 .navbar-dark .nav li a {
-  color: #c8cdd7;
+  color: #FFFFFF;
   padding-bottom: 5px;
 }
 
 .navbar-dark .nav li.active a {
-  color: #c8cdd7 !important;
+  color: #CDCDCD !important;
 }
 
 .navbar-dark.top-nav-collapse .nav li a:after {
@@ -55,7 +51,7 @@ body {
 }
 
 .navbar-dark .nav li a.white {
-  color: #050505;
+  color: #191919;
 }
 
 .navbar-dark .nav li a:after {
@@ -73,6 +69,10 @@ body {
 
 
 /*Intro page*/
+
+#header-custom {
+  background-color: #191919;
+}
 
 #overlay-custom {
   background-image: none;
@@ -99,13 +99,13 @@ section {
 
 h2.section-title {
   font-family: "Times New Roman", Serif;
-  color: #333333;
+  color: #565553;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 hr.primary {
-  border-top: 6px solid #000000;
+  border-top: 6px solid #191919;
 }
 
 p.section-paragraph {
