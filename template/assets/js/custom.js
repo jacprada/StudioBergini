@@ -1,29 +1,42 @@
-$( document ).ready(function() {
-    console.log("ready!");
+$(window).on('unload', function() {
+    $(window).scrollTop(0);
+});
+
+$(document).ready(function() {
+    // console.log("ready!");
 
 
+    $("#title-custom").animate({fontSize: "100px" }, 1000 );
 
     // Intro Page Color Change
     var introColor = "black"
 
-    function introToWhite(){
-      $(".navbar-dark .nav li a").removeClass("black");
-      $("#header-custom").css("background-color", "#FFFFFF");
-      $("#title-custom").css("color", "#050505");
-      $("#title-custom").text('Bergini');
-      $(".navbar-dark .nav li a").addClass("white");
-      introColor = "white"
-      alternateColor() 
-    }
+    // function introToWhite(){
+    //   $(".navbar-dark .nav li a").removeClass("black");
+    //   $("#header-custom").css("background-color", "#FFFFFF");
+    //   $("#title-custom").css("color", "#050505");
+    //   $("#title-custom").text('Bergini');
+    //   $(".navbar-dark .nav li a").addClass("white");
+    //   introColor = "white"
+    //   alternateColor() 
+    // }
 
-    function introToBlack(){
-      $(".navbar-dark .nav li a").removeClass("white");
-      $("#header-custom").css("background-color", "#050505");
-      $("#title-custom").css("color", "#FFFFFF");
-      $("#title-custom").text('Studio');
-      $(".navbar-dark .nav li a").addClass("black");
-      introColor = "black"
-      alternateColor()
+    // function introToBlack(){
+    //   $(".navbar-dark .nav li a").removeClass("white");
+    //   $("#header-custom").css("background-color", "#050505");
+    //   $("#title-custom").css("color", "#FFFFFF");
+    //   $("#title-custom").text('Studio');
+    //   $(".navbar-dark .nav li a").addClass("black");
+    //   introColor = "black"
+    //   alternateColor()
+    // }
+
+    function logoDisplay() {
+      if($(".navbar-dark .nav li.page-scroll").hasClass("active")) {
+        $("#menu-logo").addClass("display");
+      } else {
+        $("#menu-logo").removeClass("display");
+      }
     }
 
     // function alternateColor(){
@@ -63,10 +76,10 @@ $( document ).ready(function() {
     // setInterval(alternateColor, 100);
     // setInterval(checkHeader, 100);
     // $(window).scroll(checkHeader) 
-
-
     
     // $(window).scroll(checkHeader) 
+
+    $(window).scroll(logoDisplay) 
 
 
 });

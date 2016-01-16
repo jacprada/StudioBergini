@@ -13,6 +13,16 @@ body {
   padding: 0px;
 }
 
+#menu-logo {
+  font-family: "Times New Roman", Serif;
+  text-transform: capitalize;
+  visibility: hidden;
+}
+
+#menu-logo.display {
+  visibility: visible;
+}
+
 .navbar-nav>li>a {
   font-weight: 500;
   font-size: 18px;
@@ -36,7 +46,7 @@ body {
 
 
 .navbar-dark .nav li.active a {
-  color: #F8F8F8 !important;
+  color: #666666 !important;
 }
 
 #nav-custom.top-nav-collapse {
@@ -86,11 +96,10 @@ body {
 }
 
 #title-custom {
-  font-size: 200px;
+  font-size: 150px;
   line-height: 300px;
   text-transform: capitalize;
   text-shadow: none;
-  transition: color 0.3s;
 }
 
 
