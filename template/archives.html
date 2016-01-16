@@ -33,6 +33,7 @@
     <!-- Spectrum CSS -->
     <!-- Note: spectrum.css is the default blue theme. To use another theme, uncomment the one you want and delete the rest, including the default spectrum.css! -->
     <link href="assets/css/spectrum.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
     <!-- <link href="assets/css/spectrum-aqua.css" rel="stylesheet"> -->
     <!-- <link href="assets/css/spectrum-coffee.css" rel="stylesheet"> -->
     <!-- <link href="assets/css/spectrum-coral.css" rel="stylesheet"> -->
@@ -60,7 +61,7 @@
 
     <div id="wrapper">
 
-      <nav id="nav-custom"class="navbar navbar-dark navbar-fixed-top" role="navigation">
+      <nav id="nav-custom" class="navbar navbar-dark nav-archives" role="navigation">
         <div class="container">
           <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -68,13 +69,13 @@
             </button>
             <a class="navbar-brand" href="#page-top">
               <span class="logo">
-                <h3>SB</h3>
+                <h3 id="menu-logo" class="nav-menu-logo">Studio Bergini</h3>
               </span>
             </a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <div class="collapse archives-navbar navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
               <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
               <li class="hidden">
@@ -93,7 +94,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2>Studio Bergini Archives</h2>
+                        <h2>Archives</h2>
                         <hr class="primary">
                         <ul class="list-inline hidden-xs" id="filters">
                             <li>
@@ -135,7 +136,7 @@
                                 <img src="assets/img/demo-portfolio/2.jpg" class="img-centered" alt="">
                             </a>
                         </div>
-<!--                         <div class="col-sm-4 portfolio-item print">
+                        <div class="col-sm-4 portfolio-item print">
                             <a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
                                 <div class="caption">
                                     <div class="caption-content">
@@ -145,7 +146,7 @@
                                 </div>
                                 <img src="assets/img/demo-portfolio/3.jpg" class="img-centered" alt="">
                             </a>
-                        </div> -->
+                        </div>
                         <div class="col-sm-4 portfolio-item web">
                             <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
                                 <div class="caption">
@@ -218,76 +219,15 @@
         </section>
 
         <footer class="footer-1">
-            <div class="upper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h2 class="script">Spectrum</h2>
-                            <address>
-                                <strong>Twitter, Inc.</strong>
-                                <br>795 Folsom Ave, Suite 600
-                                <br>San Francisco, CA 94107
-                                <br>
-                                <abbr title="Phone">P:</abbr> (123) 456-7890
-                            </address>
-                        </div>
-                        <div class="col-md-3">
-                            <h4>Features</h4>
-                            <ul class="list-unstyled footer-links">
-                                <li>
-                                    <a href="#">Responsive</a>
-                                </li>
-                                <li>
-                                    <a href="#">Easy to Use</a>
-                                </li>
-                                <li>
-                                    <a href="#">Well Documented</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h4>Documentation</h4>
-                            <ul class="list-unstyled footer-links">
-                                <li>
-                                    <a href="#">Bootstrap Components</a>
-                                </li>
-                                <li>
-                                    <a href="#">Usage Information</a>
-                                </li>
-                                <li>
-                                    <a href="#">Full Documentation</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h4>Social</h4>
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="#" class="btn btn-social-light btn-facebook"><i class="fa fa-fw fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social-light btn-twitter"><i class="fa fa-fw fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social-light btn-dribbble"><i class="fa fa-fw fa-dribbble"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social-light btn-google-plus"><i class="fa fa-fw fa-google-plus"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+          <div id="custom-footer" class="lower">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <span id="custom-footer-text"class="small">Studio Bergini &copy; 2016 - Crafted By JP &#9853;</span>
                 </div>
+              </div>
             </div>
-            <div class="lower">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="small">Copyright &copy; 2015 - Start Bootstrap Themes. All Rights Reserved.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </footer>
 
     </div>
