@@ -80,22 +80,27 @@ section {
   background-color: #FFFFFF;
 }
 
+#project1 {
+  background-color: #F0F0F0;
+}
+
 h2.section-title {
   font-family: "Times New Roman", Serif;
-  color: #000000;
+  color: #222222;
 }
 
 hr.primary {
-  border-top: 6px solid #E0E0E0;
+  border-top: 6px solid #444444;
 }
 
 p.section-paragraph {
-  color: #000000;
+  color: #565553;
 }
 
 /*Footer*/
 
 #custom-footer {
+  text-align: center;
   background-color: #050505;
 }
 
