@@ -113,6 +113,7 @@ body {
 }
 
 #title-custom {
+  display: none;
   font-size: 150px;
   line-height: 300px;
   text-transform: capitalize;

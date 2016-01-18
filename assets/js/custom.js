@@ -5,10 +5,10 @@ $(window).on('unload', function() {
 $(document).ready(function() {
     // console.log("ready!");
 
-
     setTimeout(function(){
-      $("#title-custom").animate({fontSize: "100px" }, 1000 );
-    }, 500);
+        $("#title-custom").css("display", "block");
+        $("#title-custom").animate({fontSize: "100px" }, 1000 );
+    }, 250);
     
 
     // Intro Page Color Change
