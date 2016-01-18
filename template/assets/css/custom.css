@@ -172,6 +172,14 @@ a.section-link:hover {
 
 /*Archives*/
 
+.portfolio-modal .row.first {
+  margin-top: 60px;
+}
+
+.close-modal {
+  margin-right: 35px;
+}
+
 button.btn-primary {
   background-color: #333333;
   border-color: #191919;
