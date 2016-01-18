@@ -22,6 +22,7 @@ body {
   font-family: "Times New Roman", Serif;
   text-transform: capitalize;
   visibility: hidden;
+  color: #FFFFFF;
 }
 
 #menu-logo.display {
@@ -144,6 +145,10 @@ hr.primary {
 
 p.section-paragraph {
   color: #333333;
+}
+
+p.important-paragraph {
+  font-size: 20px;
 }
 
 a.section-link {
