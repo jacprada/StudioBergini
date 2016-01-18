@@ -6,7 +6,10 @@ $(document).ready(function() {
     // console.log("ready!");
 
 
-    $("#title-custom").animate({fontSize: "100px" }, 1000 );
+    setTimeout(function(){
+      $("#title-custom").animate({fontSize: "100px" }, 1000 );
+    }, 500);
+    
 
     // Intro Page Color Change
     var introColor = "black"
