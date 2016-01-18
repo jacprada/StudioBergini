@@ -172,14 +172,6 @@ a.section-link:hover {
 
 /*Archives*/
 
-.portfolio-modal .row.first {
-  margin-top: 60px;
-}
-
-.close-modal {
-  margin-right: 35px;
-}
-
 button.btn-primary {
   background-color: #333333;
   border-color: #191919;
@@ -197,4 +189,36 @@ button.btn-primary.active {
 
 .owl-buttons {
   display: none;
+}
+
+
+/*Archives Modals*/
+
+.portfolio-modal .row.first {
+  margin-top: 60px;
+}
+
+.close-modal {
+  margin-right: 35px;
+  z-index: 10;
+}
+
+.portfolio-modal .close-modal .lr,
+.portfolio-modal .close-modal .lr .rl {
+  background-color: #191919;
+}
+
+h2 {
+  font-family: "Times New Roman", Serif;
+  text-transform: uppercase;
+}
+
+h2.page-header, h3 {
+  font-family: "Times New Roman", Serif;
+  color: #333333;
+}
+
+p {
+  font-family: "Times New Roman", Serif;
+  color: #333333;
 }
