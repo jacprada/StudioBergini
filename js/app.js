@@ -1,3 +1,7 @@
+$(window).on('beforeunload', function(){
+  $(window).scrollTop(0);
+});
+
 $(initialize)
 
 function initialize() {
@@ -43,6 +47,10 @@ function closeMenu() {
 
 $(function() {
 
+  $('.home-link').on('click', function() {
+    $('body').animate({ scrollTop: 0 }, 800);
+  })
+  
   $('.toggle-text').on('click', function() {
     if($(this).hasClass('read-more')) {
     $(this).text('(less)');
