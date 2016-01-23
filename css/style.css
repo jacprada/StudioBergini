@@ -41,7 +41,6 @@ div.centered {
     top: 50%;*/
 /*    transform: translate(-50%,-50%);*/
   padding: 115px 15px 15px 15px;
-  height: auto;
 }
 
 nav {
@@ -116,29 +115,55 @@ a {
   -webkit-transition: color 0.75s;
 }
 
+section.about {
+  height: 100%;
+  padding: 115px 15px 15px 15px;
+  background-color: black;
+  text-align: left;
+}
+
+h1.about-contact {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+p.about-text {
+  color: #FFFFFF;
+  padding: 15px 0 0 0;
+}
+
+h6.about-credits {
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 15px;
+}
+
 section.project {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 100px);
 }
 
 div.project-left {
+  position: relative;
+  z-index: -5;
   display: inline-block;
   width: 33.3%;
+  text-align: left;
 }
 
 div.project-right {
   display: inline-block;
   width: 66.6%;
   float: right;
+  text-align: left;
 }
 
 div.project-bottom {
   display: block;
   width: 100%;
   clear: both;
+  text-align: left;
 }
-
-
 
 p {
   padding-right: 7.5px; 
@@ -146,10 +171,23 @@ p {
 }
 
 img {
+  overflow: hidden;
   padding-left: 7.5px;
   width: 100%;
 }
 
 h1.work-author {
-  color: red;
+  padding-left: 35%;
+  color: #000000;
+}
+
+h2.work-title {
+  padding-left: 35%;
+  color: #000000;
+  font-style: italic;
+}
+
+h3.work-type {
+  padding-left: 35%;
+  color: #000000;
 }
