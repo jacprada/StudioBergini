@@ -212,11 +212,20 @@ p.text-left {
 }
 
 a.toggle-text {
-  font-weight: bold;
+  font-style: italic;
 }
 
 a.toggle-text:hover {
   text-decoration: underline;
+}
+
+a.toggle-text.open-menu-toggle {
+  color: #FFFFFF;
+}
+
+a.toggle-text.close-menu-toggle {
+  color: #000000;
+  -webkit-transition: color 2s;
 }
 
 p.text-center {

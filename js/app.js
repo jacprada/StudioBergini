@@ -21,6 +21,8 @@ function openMenu() {
   $('.left-navigation').addClass('open-menu-nav');
   $('.project-left p').removeClass('close-menu-text');
   $('.project-left p').addClass('open-menu-text');
+  $('.toggle-text').removeClass('close-menu-toggle');
+  $('.toggle-text').addClass('open-menu-toggle');
   $('.sidebar').css('left', '0px');
 }
 
@@ -34,6 +36,8 @@ function closeMenu() {
   $('.left-navigation').addClass('close-menu-nav');
   $('.project-left p').removeClass('close-menu-text');
   $('.project-left p').addClass('close-menu-text');
+  $('.toggle-text').removeClass('open-menu-toggle');
+  $('.toggle-text').addClass('close-menu-toggle');
   $('.sidebar').css('left', '-33.3%');
 }
 
