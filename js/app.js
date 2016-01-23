@@ -47,7 +47,7 @@ $(function() {
     if($(this).hasClass('read-more')) {
     $(this).text('(less)');
     $('.project-right img').css('display', 'none');
-    $('.text-center, .text-right').css('display', 'block');
+    $('.text-center, .text-right').css('display', 'inline-block');
     $(this).removeClass('read-more');
     $(this).addClass('read-less');
   } else {
@@ -60,153 +60,66 @@ $(function() {
 })
 
 
-//   $('.project-link').on('click', function() {
-//     console.log("hi")
-//     event.preventDefault();
-//     var id = $(this).attr('id')
-//     if($(this).hasClass('active')){
-//       return false
-//     }else{
-//       switch(id){
-//         case "project-front":
-//         $('.project-right img').remove().fadeOut('slow')
-//         $('.project-right').append('<img src="./img/variations/var_1.jpg">').fadeIn(1000);
-//         add_enable_class($(this))
-//         break;
-
-//         case "project-back":
-//         $('.project-right img').remove().fadeOut('slow')
-//         $('.project-right').append('<img src="./img/variations/var_2.jpg">').fadeIn(1000);
-//         add_enable_class($(this))
-//         break;
-
-//         case "project-open":
-//         $('.project-right img').remove().fadeOut('slow')
-//         $('.project-right').append('<img src="./img/variations/var_8.jpg">').fadeIn(1000);
-//         add_enable_class($(this))
-//         break;
-
-//         case "details-one":
-//         $('.project-right img').remove().fadeOut('slow')
-//         $('.project-right').append('<img src="./img/variations/var_3.jpg">').fadeIn(1000);
-//         add_enable_class($(this))
-//         break;
-
-//         case "details-two":
-//         $('.project-right img').remove().fadeOut('slow')
-//         $('.project-right').append('<img src="./img/variations/var_4.jpg">').fadeIn(1000);
-//         add_enable_class($(this))
-//         break;
-
-//         case "details-three":
-//         $('.project-right img').remove().fadeOut('slow')
-//         $('.project-right').append('<img src="./img/variations/var_5.jpg">').fadeIn(1000);
-//         add_enable_class($(this))
-//         break;
-
-//         case "details-four":
-//         $('.project-right img').remove().fadeOut('slow')
-//         $('.project-right').append('<img src="./img/variations/var_6.jpg">').fadeIn(1000);
-//         add_enable_class($(this))
-//         break;
-
-//         case "details-five":
-//         $('.project-right img').remove().fadeOut('slow')
-//         $('.project-right').append('<img src="./img/variations/var_7.jpg">').fadeIn(1000);
-//         add_enable_class($(this))
-//         break;
-//       }} 
-//     });
-// function add_enable_class(elm){
-//   elm.parent().siblings('li').children().removeClass('active');
-//   elm.addClass('active')
-// }
-
-$('.project-link').on('click', function() {
+  $('.project-link').on('click', function() {
+    console.log("hi")
     event.preventDefault();
     var id = $(this).attr('id')
-    if ($(this).hasClass('active')) {
+    if($(this).hasClass('active')){
       return false
-    } else {
-      switch (id) {
+    }else{
+      switch(id){
         case "project-front":
-          add_enable_class($(this))
-          $('.project-right img').fadeOut('slow', function() {
-            $(this).remove().delay(100);
-            $('.project-right').hide().append('<img src="./img/variations/var_1.jpg">').fadeIn('slow');
-          })
-
-
-          break;
+        $('.project-right img').remove().fadeOut('slow')
+        $('.project-right').append('<img src="./img/variations/var_1.jpg">').fadeIn(1000);
+        add_enable_class($(this))
+        break;
 
         case "project-back":
-          add_enable_class($(this))
-          $('.project-right img').fadeOut('slow', function() {
-            $(this).remove().delay(100);
-            $('.project-right').hide().append('<img src="./img/variations/var_2.jpg">').fadeIn('slow');
-          })
-
-
-          break;
+        $('.project-right img').remove().fadeOut('slow')
+        $('.project-right').append('<img src="./img/variations/var_2.jpg">').fadeIn(1000);
+        add_enable_class($(this))
+        break;
 
         case "project-open":
-          add_enable_class($(this))
-          $('.project-right img').fadeOut('slow', function() {
-            $(this).remove();
-            $('.project-right').hide().append('<img src="./img/variations/var_3.jpg">').fadeIn('slow');
-          })
-
-          break;
+        $('.project-right img').remove().fadeOut('slow')
+        $('.project-right').append('<img src="./img/variations/var_8.jpg">').fadeIn(1000);
+        add_enable_class($(this))
+        break;
 
         case "details-one":
-          add_enable_class($(this))
-          $('.project-right img').fadeOut('slow', function() {
-            $(this).remove();
-            $('.project-right').hide().append('<img src="./img/variations/var_8.jpg">').fadeIn('slow');
-          })
-
-          break;
+        $('.project-right img').remove().fadeOut('slow')
+        $('.project-right').append('<img src="./img/variations/var_3.jpg">').fadeIn(1000);
+        add_enable_class($(this))
+        break;
 
         case "details-two":
-          add_enable_class($(this))
-          $('.project-right img').fadeOut('slow', function() {
-            $(this).remove();
-            $('.project-right').hide().append('<img src="./img/variations/var_4.jpg">').fadeIn('slow');
-          })
-
-          break;
+        $('.project-right img').remove().fadeOut('slow')
+        $('.project-right').append('<img src="./img/variations/var_4.jpg">').fadeIn(1000);
+        add_enable_class($(this))
+        break;
 
         case "details-three":
-          $('.project-right img').fadeOut('slow', function() {
-            $(this).remove();
-            $('.project-right').hide().append('<img src="./img/variations/var_5.jpg">').fadeIn('slow');
-          })
-          add_enable_class($(this))
-          break;
+        $('.project-right img').remove().fadeOut('slow')
+        $('.project-right').append('<img src="./img/variations/var_5.jpg">').fadeIn(1000);
+        add_enable_class($(this))
+        break;
 
         case "details-four":
-          add_enable_class($(this))
-          $('.project-right img').fadeOut('slow', function() {
-            $(this).remove();
-            $('.project-right').hide().append('<img src="./img/variations/var_6.jpg">').fadeIn('slow');
-          })
-
-          break;
+        $('.project-right img').remove().fadeOut('slow')
+        $('.project-right').append('<img src="./img/variations/var_6.jpg">').fadeIn(1000);
+        add_enable_class($(this))
+        break;
 
         case "details-five":
-          add_enable_class($(this))
-          $('.project-right img').fadeOut('slow', function() {
-            $(this).remove();
-            $('.project-right').hide().append('<img src="./img/variations/var_7.jpg">').fadeIn('slow');
-          })
+        $('.project-right img').remove().fadeOut('slow')
+        $('.project-right').append('<img src="./img/variations/var_7.jpg">').fadeIn(1000);
+        add_enable_class($(this))
+        break;
+      }} 
+    });
+function add_enable_class(elm){
+  elm.parent().siblings('li').children().removeClass('active');
+  elm.addClass('active')
+}
 
-          break;
-      }
-    }
-  });
-
-  function add_enable_class(elm) {
-    elm.parent().siblings('li').children().removeClass('active');
-    elm.addClass('active')
-  }
 });
