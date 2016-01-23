@@ -20,9 +20,7 @@ function openMenu() {
 
 function closeMenu() {
   $('.sidebar').show();
-
   $('.fa-long-arrow-right').removeClass('open-menu');
   $('.fa-long-arrow-right').addClass('close-menu');
-
   $('.sidebar').css('left', '-300px');
 }
