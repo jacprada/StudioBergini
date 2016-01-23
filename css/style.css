@@ -195,6 +195,7 @@ div.project-left {
 div.project-right {
   display: inline-block;
   width: 66.6%;
+  background-color: #F0F0F0;
   float: right;
   text-align: left;
 }
@@ -254,9 +255,10 @@ p.close-menu-text {
 }
 
 img {
-  overflow: hidden;
   padding-left: 7.5px;
-  width: 100%;
+  width: 85%;
+  display: block;
+  margin: 0 auto;
 }
 
 h1.work-author {

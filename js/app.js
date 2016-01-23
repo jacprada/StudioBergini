@@ -47,13 +47,13 @@ $(function() {
     if($(this).hasClass('read-more')) {
     $(this).text('(less)');
     $('.project-right img').css('display', 'none');
-    $('.text-center, .text-right').css('display', 'inline-block');
+    $('.text-center, .text-right').css('display', 'block');
     $(this).removeClass('read-more');
     $(this).addClass('read-less');
   } else {
     $(this).text('(more)');
     $('.text-center, .text-right').css('display', 'none');
-    $('.project-right img').css('display', 'inline');
+    $('.project-right img').css('display', 'block');
     $(this).removeClass('read-less');
     $(this).addClass('read-more');
   }
