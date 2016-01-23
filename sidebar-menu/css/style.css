@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  cursor: default;
+  width: 100%;
+  height: 100vh;
+
+  background-repeat: repeat-x;
+  background-image: linear-gradient(to top right, #333, #000);
+
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div.sidebar {
+  z-index: -1;
+
+  width: 300px;
+  height: 100vh;
+
+  background: red;
+
+  position: absolute;
+    left: -300px;
+    top: 0;
+
+  -webkit-transition: left 0.5s;
+}
+
+div.centered {
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+  padding-bottom: 150px;
+}
+
+nav {
+  z-index: 2;
+
+  height: 60px;
+}
+
+ul {
+  margin: 20px;
+}
+
+li {
+  line-height: 65px;
+}
+
+.fa-bars {
+  font-size: 25px;
+  color: #fff;
+
+  float: left;
+  cursor: pointer;
+
+  opacity: .6;
+}
+
+.open-menu {
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  -webkit-transition: transform 0.5s, opacity 0.5s;
+
+  opacity: 1;
+}
+
+.close-menu {
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+
+  -webkit-transition: transform 0.5s, opacity 0.5s;
+
+  opacity: .5;
+}
+
+h1 {
+  font-size: 50px;
+  letter-spacing: -3px;
+  font-weight: 300;
+}
+
+h2 {
+  margin-top: -18px;
+
+  font-size: 20px;
+  font-weight: 100;
+}
+
+hr {
+  border: none;
+  margin-top: 5px;
+  height: 1px;
+  background-color: #edeeee;
+  opacity: .1;
+}
+
+button {  
+  padding: 5px 10px;
+  margin: 5px;
+  background: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 100;
+  color: #fff;
+
+  opacity: .8;
+}
+
+.facebook { border: 1px solid #4C67A1; }
+.github { border: 1px solid #8CC665; }
+.linkedin { border: 1px solid #0077B5; }
+
+.facebook:hover { background: #4C67A1; }
+.github:hover { background: #8CC665; }
+.linkedin:hover { background: #0077B5; }
