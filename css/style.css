@@ -85,6 +85,26 @@ li {
   display: inline-block;
 }
 
+li.project-nav {
+  padding-left: 2.5px;
+}
+
+a.project-link:hover {
+  text-decoration: underline;
+}
+
+a.project-link.active {
+  text-decoration: underline;
+}
+
+#details-nav {
+  cursor: default;
+}
+
+li.first-right {
+  padding-left: 15px;
+}
+
 li.right-item {
   float: right;
 }
@@ -202,6 +222,7 @@ p.close-menu-text {
 }
 
 img {
+  position: absolute;
   overflow: hidden;
   padding-left: 7.5px;
   width: 100%;

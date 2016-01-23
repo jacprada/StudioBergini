@@ -37,7 +37,38 @@ function closeMenu() {
   $('.sidebar').css('left', '-33.3%');
 }
 
-// var changeNavLeft = function(){
-//   $('.left-navigation').removeClass('open-menu-nav');
-//   $('.left-navigation').addClass('close-menu-nav');
-// };
+
+var handler = function(e){
+    //code here
+}
+
+$(function() {
+  $('.project-link').on('click', function() {
+    event.preventDefault();
+   var id = $(this).attr('id')
+
+   switch(id){
+    case "project-front":
+    $(this).off('click');
+    $('.project-right img').fadeOut('slow')
+    $('.project-right').append('<img src="./img/variations/var_2.jpg">').show('slow');
+    console.log($(this).parent().siblings('li').children());
+
+    $(this).parent().siblings('li').children().on('click');
+    break;
+
+    case "project-back":
+    $(this).off('click');
+    $('.project-right img').fadeOut('slow')
+    $('.project-right').append('<img src="./img/variations/var_4.jpg">').show('slow');
+    console.log($(this).parent().siblings('li').children());
+   $(this).parent().siblings('li').children().on('click');
+    break;
+
+  }
+    // $('.project-right img').fadeOut('slow')
+    // $('.project-right').append('<img src="./img/variations/var_2.jpg">').show('slow');
+    event.preventDefault();
+  });
+
+});
