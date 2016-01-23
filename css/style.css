@@ -206,9 +206,32 @@ div.project-bottom {
   text-align: left;
 }
 
-p {
+p.text-left {
   padding-right: 7.5px; 
   color: #000000;
+}
+
+a.toggle-text {
+  font-weight: bold;
+}
+
+a.toggle-text:hover {
+  text-decoration: underline;
+}
+
+p.text-center {
+  width: 49.5%;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+  color: #000000;
+  display: none;
+}
+
+p.text-right {
+  width: 49.5%;
+  padding-left: 7.5px; 
+  color: #000000;
+  display: none;
 }
 
 p.open-menu-text {
@@ -228,6 +251,7 @@ img {
 }
 
 h1.work-author {
+  padding-top: 15px;
   padding-left: 35%;
   color: #000000;
 }
