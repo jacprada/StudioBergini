@@ -26,11 +26,11 @@ body {
 
 div.sidebar {
   z-index: -1;
-  width: 300px;
+  width: 33.3%;
   height: 100vh;
-  background: red;
+  background: #000000;
   position: absolute;
-    left: -300px;
+    left: -33.3%;
     top: 0;
   -webkit-transition: left 0.5s;
 }
@@ -60,18 +60,20 @@ li {
   display: inline-block;
 }
 
-li.archive-link {
+li.right-item {
   float: right;
 }
 
-li.arrow-link {
+li.arrow-item {
   display: block;
 }
 
-a.menu-item {
+a {
   color: #000000;
   text-decoration: none;
 }
+
+
 
 .fa-long-arrow-right {
   margin-top: 10px;
@@ -84,17 +86,29 @@ a.menu-item {
 }
 
 .open-menu {
+  color: #FFFFFF;
   -ms-transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
-  -webkit-transition: transform 0.5s, opacity 0.5s;
+  -webkit-transition: color 0.75s, transform 0.75s, opacity 0.75s;
   opacity: 1;
 }
 
 .close-menu {
+  color: #000000;
   -ms-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: transform 0.5s, opacity 0.5s;
+  -webkit-transition: color 0.75s, transform 0.75s, opacity 0.75s;
   opacity: 1;
+}
+
+.open-menu-link {
+  color: #FFFFFF;
+  -webkit-transition: color 0.75s;
+}
+
+.close-menu-link {
+  color: #000000;
+  -webkit-transition: color 0.75s;
 }
