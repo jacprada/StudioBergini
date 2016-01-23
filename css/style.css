@@ -67,12 +67,12 @@ nav.right-navigation {
 
 nav.left-navigation.open-menu-nav {
   background-color: transparent;
-/*  -webkit-transition: background-color 0.5s;*/
+  -webkit-transition: background-color 0.1s;
 }
 
 nav.left-navigation.close-menu-nav {
   background-color: #FFFFFF;
-  -webkit-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.20s linear 0.35s;
 }
 
 ul {
@@ -130,12 +130,12 @@ a {
 
 .open-menu-link {
   color: #FFFFFF;
-  -webkit-transition: color 0.75s;
+  -webkit-transition: color 0.5s;
 }
 
 .close-menu-link {
   color: #000000;
-  -webkit-transition: color 0.75s;
+  -webkit-transition: color 0.5s;
 }
 
 section.about {
@@ -189,6 +189,16 @@ div.project-bottom {
 p {
   padding-right: 7.5px; 
   color: #000000;
+}
+
+p.open-menu-text {
+  color: #FFFFFF;
+/*  -webkit-transition: color 0.1s ease-out;*/
+}
+
+p.close-menu-text {
+  color: #000000;
+  -webkit-transition: color 2s;
 }
 
 img {
