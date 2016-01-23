@@ -222,7 +222,6 @@ p.close-menu-text {
 }
 
 img {
-  position: absolute;
   overflow: hidden;
   padding-left: 7.5px;
   width: 100%;
