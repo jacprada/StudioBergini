@@ -279,12 +279,26 @@ h3.work-type {
   color: #000000;
 }
 
+/*div.project-right::selection,*/
 p.text-left::selection,
 p.text-center::selection,
 p.text-right::selection,
 h1.work-author::selection,
 h2.work-title::selection,
-h3.work-type::selection {
+h3.work-type::selection,
+a.toggle-text::selection,
+a.home-link::selection,
+i.menu-arrow::selection,
+img::selection {
   color: #FFFFFF; 
   background: #000000;
+}
+
+h1.about-contact::selection,
+p.about-text::selection,
+h6.about-credits::selection,
+a.home-link.open-menu-link::selection,
+i.menu-arrow.open-menu::selection {
+  color: #000000; 
+  background: #FFFFFF;
 }
