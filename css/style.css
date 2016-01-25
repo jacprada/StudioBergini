@@ -6,21 +6,20 @@ body {
   margin: 0 auto;
   text-align: center;
   background-color: #FFFFFF;
-  cursor: default;
+/*  cursor: default;*/
   width: 100%;
   font-family: 'Times New Roman', Serif;
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 23px;
+  line-height: 1.2;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-
-  -webkit-touch-callout: none;
+/*  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none;*/
 }
 
 div.sidebar {
@@ -166,7 +165,6 @@ section.about {
 
 h1.about-contact {
   color: #FFFFFF;
-  font-weight: bold;
 }
 
 p.about-text {
@@ -254,10 +252,12 @@ p.close-menu-text {
 }
 
 img {
+  position: relative;
 /*  padding: 15px 7.5px;*/
   padding-left: 7.5px;
   width: 100%;
   display: block;
+  z-index: 15;
 /*  margin: 0 auto;*/
 }
 
@@ -277,4 +277,14 @@ h3.work-type {
   padding-bottom: 15px;
   padding-left: 35%;
   color: #000000;
+}
+
+p.text-left::selection,
+p.text-center::selection,
+p.text-right::selection,
+h1.work-author::selection,
+h2.work-title::selection,
+h3.work-type::selection {
+  color: #FFFFFF; 
+  background: #000000;
 }
