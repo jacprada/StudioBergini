@@ -69,6 +69,13 @@ $(function() {
 
 
   $('.project-link').on('click', function() {
+    if($('.toggle-text').hasClass('read-less')) {
+      $('.toggle-text').text('(more)');
+      $('.text-center, .text-right').css('display', 'none');
+      $('.project-right img').css('display', 'block');
+      $('.toggle-text').removeClass('read-less');
+      $('.toggle-text').addClass('read-more');
+    }
     console.log("hi")
     event.preventDefault();
     var id = $(this).attr('id')
