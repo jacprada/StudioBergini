@@ -34,19 +34,13 @@ $(window).on('scroll', function(){
 // });
 
 
-$(initialize)
 
-function initialize() {
-  // $('.sidebar').hide();
 
-  $('.menu-arrow').on('click', function() {
-    if( $(this).hasClass('open-menu')) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
-}
+// function initialize() {
+//   // $('.sidebar').hide();
+
+
+// }
 
 // $('.arrow-item').hover(
 //   function() {
@@ -88,6 +82,15 @@ function closeMenu() {
 
 $(function() {
 
+  $('.menu-arrow').on('click', function(e) {
+    e.preventDefault();
+    if( $(this).hasClass('open-menu')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  })
+
 
   setWaypoints();
 
@@ -97,11 +100,31 @@ $(function() {
       new Waypoint({
         element: continuousElements[i],
         handler: function() {
-        // console.log(this.element.id)
-        var ano = ($('#' + this.element.id + ' ul li img').first().attr('alt'))
-        $('.slider-info').text(ano);
+        var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
+        var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
+        var imageMax = getImageMax(this.element.id);
+        var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+        $('.slider-info').text(imageFullText);
       },
-      offset: 50
+      offset: 74
+    })
+    }
+  }
+
+  function resetWaypoints() {
+    var continuousElements = document.getElementsByClassName('continuous-true')
+    for (var i = 0; i < continuousElements.length; i++) {
+      new Waypoint({
+        element: continuousElements[i],
+        handler: function() {
+        // console.log(this.element.id)
+        var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+        var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+        var imageMax = getImageMax(this.element.id);
+        var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+        $('.slider-info').text(imageFullText);
+      },
+      offset: 75
     })
     }
   }
@@ -186,6 +209,7 @@ $(function() {
       var imageMax = getImageMax(sectionId);
       $('#' + sectionId + ' h4.image-info').text(imageInfo + ' ' + imageNum + '/' + imageMax);
     };
+    resetWaypoints();
   });
 
   function getImageMax(sectionId) {
