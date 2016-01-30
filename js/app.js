@@ -58,6 +58,8 @@ $(function() {
 
   // $('.my-slider').unslider();
 
+  $('.slider-info').text('(more)');
+
   $('.my-slider').unslider({
     animation: 'fade'
   });
@@ -84,14 +86,14 @@ $(function() {
   $('.toggle-text').on('click', function() {
     if($(this).hasClass('read-more')) {
     $(this).text('(less)');
-    $('.project-right img').css('display', 'none');
+    $('.unslider').css('display', 'none');
     $('.text-center, .text-right').css('display', 'inline-block');
     $(this).removeClass('read-more');
     $(this).addClass('read-less');
   } else {
     $(this).text('(more)');
     $('.text-center, .text-right').css('display', 'none');
-    $('.project-right img').css('display', 'block');
+    $('.unslider').css('display', 'block');
     $(this).removeClass('read-less');
     $(this).addClass('read-more');
   }

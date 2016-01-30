@@ -246,8 +246,28 @@ div.project-bottom {
 }
 
 div.my-slider {
-  background-color: gray;
   height: 450px;
+}
+
+div.unslider {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+a.unslider-arrow {
+  top: 0;
+  z-index: 300;
+  width: 50%;
+  height: 450px;
+}
+
+a.prev {
+  cursor: w-resize;
+}
+
+a.next {
+  cursor: e-resize;
 }
 
 p.text-left {
