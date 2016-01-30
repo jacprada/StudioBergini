@@ -58,11 +58,22 @@ $(function() {
 
   // $('.my-slider').unslider();
 
-  $('.slider-info').text('(more)');
+
+
+
+  // var imageInfo = $('ul .unslider-active img').attr('alt');
+  // console.log(imageInfo);
+  // $('.slider-info').text(imageInfo);
 
   $('.my-slider').unslider({
     animation: 'fade'
   });
+
+  $('.prev, .next').on('click', function() {
+    var imageInfo = $('ul .unslider-active img').attr('alt');
+    console.log(imageInfo);
+    $('.slider-info').text(imageInfo);
+  })
 
   // function introAnimation(){
   //   $(".intro").css("background-color", "#FFFFFF");
