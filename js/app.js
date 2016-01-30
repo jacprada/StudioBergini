@@ -56,7 +56,11 @@ function closeMenu() {
 
 $(function() {
 
-  $('.my-slider').unslider();
+  // $('.my-slider').unslider();
+
+  $('.my-slider').unslider({
+    animation: 'fade'
+  });
 
   // function introAnimation(){
   //   $(".intro").css("background-color", "#FFFFFF");
