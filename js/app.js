@@ -141,39 +141,74 @@ $(function() {
     }
   }
 
+
+  // context: '.scrollable-element'
+
   bananaWaypoints()
   function bananaWaypoints() {
     var continuousElements = document.getElementsByClassName('continuous-true')
     for (var i = 0; i < continuousElements.length; i++) {
-      if(direction == 'down') {
-        new Waypoint({
-          element: continuousElements[i],
-          handler: function() {
-        // console.log(this.element.id)
-        var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
-        var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
-        var imageMax = getImageMax(this.element.id);
-        var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-        $('.slider-info').text(imageFullText);
-      },
-      offset: 75
-    })
-      } else {
-        new Waypoint({
-          element: continuousElements[i],
-          handler: function() {
-          // console.log(this.element.id)
-          var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
-          var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
-          var imageMax = getImageMax(this.element.id);
-          var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-          $('.slider-info').text(imageFullText);
+      new Waypoint({
+        element: continuousElements[i],
+        handler: function(direction) {
+          if(direction == 'down') {
+            // var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+            // var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+            // var imageMax = getImageMax(this.element.id);
+            // var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+            // $('.slider-info').text(imageFullText);
+            alert('done')
+          }
         },
+        // context: $('main'),
         offset: 75
       })
-      }
     }
   }
+
+  //     if(direction == 'down') {
+  //       new Waypoint({
+  //         element: continuousElements[i],
+  //         handler: function() {
+  //       // console.log(this.element.id)
+  //       var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //       var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //       var imageMax = getImageMax(this.element.id);
+  //       var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //       $('.slider-info').text(imageFullText);
+  //     },
+  //     offset: 75
+  //   })
+  //     } else {
+  //       new Waypoint({
+  //         element: continuousElements[i],
+  //         handler: function() {
+  //         // console.log(this.element.id)
+  //         var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //         var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //         var imageMax = getImageMax(this.element.id);
+  //         var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //         $('.slider-info').text(imageFullText);
+  //       },
+  //       offset: 75
+  //     })
+  //     }
+  //   }
+  // }
+
+
+
+
+  // .waypoint(function(event, direction) {
+  //    if (direction === 'down') {
+  //       // do this on the way down
+  //    }
+  //    else {
+  //       // do this on the way back up through the waypoint
+  //    offset: '50%'  // trigger at middle of page.
+
+  //    }
+  // });
 
 
   // $('#flux').bind('scroll', function() {
