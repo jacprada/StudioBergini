@@ -16,6 +16,15 @@ function initialize() {
   });
 }
 
+// $('.arrow-item').hover(
+//   function() {
+//     $(this).addClass('hover');
+//   }, function() {
+//     $(this).removeClass('hover');
+//   });
+
+
+
 function openMenu() {
   $('.menu-arrow').removeClass('close-menu');
   $('.menu-arrow').addClass('open-menu');
@@ -47,20 +56,20 @@ function closeMenu() {
 
 $(function() {
 
-  function introAnimation(){
-    $(".intro").css("background-color", "#FFFFFF");
-    $(".intro-studio").css("display", "none");
-    $(".intro-bergini").css("display", "block");
-  }
+  // function introAnimation(){
+  //   $(".intro").css("background-color", "#FFFFFF");
+  //   $(".intro-studio").css("display", "none");
+  //   $(".intro-bergini").css("display", "block");
+  // }
 
-  function outroAnimation(){
-    $(".intro").css("display", "none");
-    $("header").css("display", "block");
-    $("main").css("display", "block");
-  }
+  // function outroAnimation(){
+  //   $(".intro").css("display", "none");
+  //   $("header").css("display", "block");
+  //   $("main").css("display", "block");
+  // }
 
-  setTimeout(introAnimation, 1000);
-  setTimeout(outroAnimation, 2000);
+  // setTimeout(introAnimation, 1000);
+  // setTimeout(outroAnimation, 2000);
 
   $('.home-link').on('click', function() {
     $('body').animate({ scrollTop: 0 }, 800);
