@@ -104,6 +104,9 @@ nav.right-navigation {
 nav.left-navigation.open-menu-nav {
   background-color: transparent;
   -webkit-transition: background-color 0.1s;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 nav.left-navigation.close-menu-nav {
@@ -240,6 +243,10 @@ div.project-bottom {
   width: 100%;
   clear: both;
   text-align: left;
+}
+
+div.my-slider {
+  background-color: blue;
 }
 
 p.text-left {

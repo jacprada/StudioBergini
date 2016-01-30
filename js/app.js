@@ -56,6 +56,8 @@ function closeMenu() {
 
 $(function() {
 
+  $('.my-slider').unslider();
+
   // function introAnimation(){
   //   $(".intro").css("background-color", "#FFFFFF");
   //   $(".intro-studio").css("display", "none");
