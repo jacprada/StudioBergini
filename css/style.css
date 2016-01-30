@@ -70,14 +70,14 @@ div.centered {
     left: 50%;
     top: 50%;*/
 /*    transform: translate(-50%,-50%);*/
-  padding: 115px 15px 15px 15px;
+  padding: 75px 15px 15px 15px;
 }
 
 header {
   position: fixed;
   z-index: 15;
   width: 100%;
-  height: 100px;
+  height: 60px;
 }
 
 nav.left-navigation {
@@ -221,8 +221,14 @@ h6.about-credits {
 
 section.project {
   width: 100%;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 75px);
   padding-bottom: 15px;
+}
+
+div.project-top {
+  width: 99.9%;
+  text-align: right;
+  background-color: red;
 }
 
 div.project-left {
