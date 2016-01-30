@@ -243,17 +243,20 @@ $(function() {
     $('body').animate({ scrollTop: 0 }, 800);
   })
   
-  $('.toggle-text').on('click', function() {
+  $('.toggle-text').on('click', function(e) {
+    e.preventDefault();
+    var sectionId = $(this).parents('section')[0].id;
+    console.log(sectionId)
     if($(this).hasClass('read-more')) {
     $(this).text('(less)');
-    $('.unslider').css('display', 'none');
-    $('.text-center, .text-right').css('display', 'inline-block');
+    $('#' + sectionId + ' .unslider').css('display', 'none');
+    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block');
     $(this).removeClass('read-more');
     $(this).addClass('read-less');
   } else {
     $(this).text('(more)');
-    $('.text-center, .text-right').css('display', 'none');
-    $('.unslider').css('display', 'block');
+    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
+    $('#' + sectionId + ' .unslider').css('display', 'block');
     $(this).removeClass('read-less');
     $(this).addClass('read-more');
   }
