@@ -2,6 +2,29 @@ $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
 
+
+$(window).on('scroll', function(){
+  getScrolling();
+
+  function getScrolling() {
+    var sections = $('section.project');
+    
+    for (var i = 0; i < sections.length; i++) {
+      // var sectionId = sections[i].id;
+      var sectionText = $('#' + sections[i].id + ' h4.image-info').text();
+      new Waypoint({
+        element: document.getElementById(sections[i].id),
+        handler: function() {
+          $('.slider-info').text(sectionText);
+          console.log(i);
+        },
+        offset: 75
+      })
+    }
+  }
+});
+
+
 $(initialize)
 
 function initialize() {
@@ -56,6 +79,12 @@ function closeMenu() {
 
 $(function() {
 
+  // $('#flux').bind('scroll', function() {
+  //   if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight) {
+  //     alert('end reached');
+  //   }
+  // })
+
   getImageInfo();
 
   function getImageInfo() {
@@ -65,9 +94,35 @@ $(function() {
       var imageInfo = $('#' + sectionId + ' ul li img').first().attr('alt');
       var imageNum = $('#' + sectionId + ' ul li img').first().attr('data-num');
       var imageMax = getImageMax(sectionId);
-      $('#' + sectionId + ' h4.image-info').text(imageInfo + ' ' + imageNum + '/' + imageMax);
+      var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax
+      $('#' + sectionId + ' h4.image-info').text(imageFullText);
     };
   }
+
+
+  // function handler(direction) {
+  //   console.log('diocane')
+  // }
+
+  // function getScrolling() {
+  //   var sections = $('section.project');
+  //   console.log(sections);
+  //   sections.forEach(function(element) {
+  //     new Waypoint({
+  //       element: element,
+  //       handler: handler,
+  //       offset: 75
+  //     })
+  //   })
+  // }
+
+
+
+
+
+
+
+
 
   $('.my-slider').unslider({
     animation: 'fade'
