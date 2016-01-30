@@ -92,7 +92,7 @@ $(function() {
   })
 
 
-  setWaypoints();
+  // setWaypoints();
 
   function setWaypoints() {
     var continuousElements = document.getElementsByClassName('continuous-true')
@@ -140,6 +140,41 @@ $(function() {
     })
     }
   }
+
+  bananaWaypoints()
+  function bananaWaypoints() {
+    var continuousElements = document.getElementsByClassName('continuous-true')
+    for (var i = 0; i < continuousElements.length; i++) {
+      if(direction == 'down') {
+        new Waypoint({
+          element: continuousElements[i],
+          handler: function() {
+        // console.log(this.element.id)
+        var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+        var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+        var imageMax = getImageMax(this.element.id);
+        var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+        $('.slider-info').text(imageFullText);
+      },
+      offset: 75
+    })
+      } else {
+        new Waypoint({
+          element: continuousElements[i],
+          handler: function() {
+          // console.log(this.element.id)
+          var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+          var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+          var imageMax = getImageMax(this.element.id);
+          var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+          $('.slider-info').text(imageFullText);
+        },
+        offset: 75
+      })
+      }
+    }
+  }
+
 
   // $('#flux').bind('scroll', function() {
   //   if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight) {
