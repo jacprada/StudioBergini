@@ -100,11 +100,23 @@ $(function() {
       new Waypoint({
         element: continuousElements[i],
         handler: function() {
-        var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
-        var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
-        var imageMax = getImageMax(this.element.id);
-        var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-        $('.slider-info').text(imageFullText);
+        if($('#' + this.element.id + ' .toggle-text').hasClass('read-more')) {
+          if($('#' + this.element.id + ' ul .unslider-active img').attr('alt') == undefined) {
+            var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
+            var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
+            var imageMax = getImageMax(this.element.id);
+            var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+            $('.slider-info').text(imageFullText);
+          } else {
+            var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+            var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+            var imageMax = getImageMax(this.element.id);
+            var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+            $('.slider-info').text(imageFullText);
+          }
+        } else {
+          $('.slider-info').text('');
+        }
       },
       offset: 74
     })
@@ -245,6 +257,7 @@ $(function() {
   
   $('.toggle-text').on('click', function(e) {
     e.preventDefault();
+    setWaypoints()
     var sectionId = $(this).parents('section')[0].id;
     console.log(sectionId)
     if($(this).hasClass('read-more')) {
