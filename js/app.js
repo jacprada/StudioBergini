@@ -4,25 +4,34 @@ $(window).on('beforeunload', function(){
 
 
 $(window).on('scroll', function(){
-  getScrolling();
+  // var sections = $('section.project')
+  // // console.log(sections)
+  // for (var i = 0; i < sections.length; i++) {
+  //   // console.log(sections[i])
+  //   new Waypoint({
+  //     element: sections[i],
+  //     handler: function() {
+  //       alert('hit')
+  //     }
+  //   })
+  // }
 
-  function getScrolling() {
-    var sections = $('section.project');
-    
-    for (var i = 0; i < sections.length; i++) {
-      // var sectionId = sections[i].id;
-      var sectionText = $('#' + sections[i].id + ' h4.image-info').text();
-      new Waypoint({
-        element: document.getElementById(sections[i].id),
-        handler: function() {
-          $('.slider-info').text(sectionText);
-          console.log(i);
-        },
-        offset: 75
-      })
-    }
-  }
-});
+})
+//   getScrolling();
+
+//   function getScrolling() {
+//     var sections = $('section.project');
+//     for (var i = 0; i < sections.length; i++) {
+//       new Waypoint({
+//         element: sections[i],
+//         handler: function() {
+//           alert(this.element.innerHTML + ' hit')
+//         },
+//         offset: 75
+//       })
+//     }
+//   }
+// });
 
 
 $(initialize)
@@ -79,6 +88,24 @@ function closeMenu() {
 
 $(function() {
 
+
+  setWaypoints();
+
+  function setWaypoints() {
+    var continuousElements = document.getElementsByClassName('continuous-true')
+    for (var i = 0; i < continuousElements.length; i++) {
+      new Waypoint({
+        element: continuousElements[i],
+        handler: function() {
+        // console.log(this.element.id)
+        var ano = ($('#' + this.element.id + ' ul li img').first().attr('alt'))
+        $('.slider-info').text(ano);
+      },
+      offset: 50
+    })
+    }
+  }
+
   // $('#flux').bind('scroll', function() {
   //   if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight) {
   //     alert('end reached');
@@ -98,6 +125,28 @@ $(function() {
       $('#' + sectionId + ' h4.image-info').text(imageFullText);
     };
   }
+
+
+
+
+
+
+
+  // setWaypoints();
+
+  // function setWaypoints() {
+  //   var sections = $('section.project');
+  //   for (var i = 0; i < sections.length; i++) {
+  //     var sectionId = sections[i].id;
+  //     new Waypoint({
+  //       element: document.getElementById(sectionId),
+  //       handler: function() {
+  //         console.log("hello");
+  //       },
+  //       offset: 75
+  //     })
+  //   }
+  // }
 
 
   // function handler(direction) {
@@ -255,5 +304,7 @@ function add_enable_class(elm){
   elm.parent().siblings('li').children().removeClass('active');
   elm.addClass('active')
 }
+
+// getScrolling();
 
 });
