@@ -152,16 +152,36 @@ $(function() {
         element: continuousElements[i],
         handler: function(direction) {
           if(direction == 'down') {
-            // var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
-            // var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
-            // var imageMax = getImageMax(this.element.id);
-            // var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-            // $('.slider-info').text(imageFullText);
-            alert('done')
+            var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+            var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+            var imageMax = getImageMax(this.element.id);
+            var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+            $('.slider-info').text(imageFullText);
+            console.log('going down ' + this.element.id)
           }
         },
         // context: $('main'),
         offset: 75
+      })
+      new Waypoint({
+        element: continuousElements[i],
+        handler: function(direction) {
+          if(direction == 'up') {
+            var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+            var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+            var imageMax = getImageMax(this.element.id);
+            var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+            $('.slider-info').text(imageFullText);
+            console.log('going up ' + this.element.id)
+            console.log(this.element)
+            // alert('hello')
+          }
+        },
+        offset: function() {
+          console.log(this.element.clientHeight)
+          return -(this.element.clientHeight - 115)
+        }
+        // offset: -450
       })
     }
   }
