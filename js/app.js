@@ -2,55 +2,6 @@ $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
 
-
-$(window).on('scroll', function(){
-  // var sections = $('section.project')
-  // // console.log(sections)
-  // for (var i = 0; i < sections.length; i++) {
-  //   // console.log(sections[i])
-  //   new Waypoint({
-  //     element: sections[i],
-  //     handler: function() {
-  //       alert('hit')
-  //     }
-  //   })
-  // }
-
-})
-//   getScrolling();
-
-//   function getScrolling() {
-//     var sections = $('section.project');
-//     for (var i = 0; i < sections.length; i++) {
-//       new Waypoint({
-//         element: sections[i],
-//         handler: function() {
-//           alert(this.element.innerHTML + ' hit')
-//         },
-//         offset: 75
-//       })
-//     }
-//   }
-// });
-
-
-
-
-// function initialize() {
-//   // $('.sidebar').hide();
-
-
-// }
-
-// $('.arrow-item').hover(
-//   function() {
-//     $(this).addClass('hover');
-//   }, function() {
-//     $(this).removeClass('hover');
-//   });
-
-
-
 function openMenu() {
   $('.menu-arrow').removeClass('close-menu');
   $('.menu-arrow').addClass('open-menu');
@@ -250,53 +201,6 @@ $(function() {
       $('#' + sectionId + ' h4.image-info').text(imageFullText);
     };
   }
-
-
-
-
-
-
-
-  // setWaypoints();
-
-  // function setWaypoints() {
-  //   var sections = $('section.project');
-  //   for (var i = 0; i < sections.length; i++) {
-  //     var sectionId = sections[i].id;
-  //     new Waypoint({
-  //       element: document.getElementById(sectionId),
-  //       handler: function() {
-  //         console.log("hello");
-  //       },
-  //       offset: 75
-  //     })
-  //   }
-  // }
-
-
-  // function handler(direction) {
-  //   console.log('diocane')
-  // }
-
-  // function getScrolling() {
-  //   var sections = $('section.project');
-  //   console.log(sections);
-  //   sections.forEach(function(element) {
-  //     new Waypoint({
-  //       element: element,
-  //       handler: handler,
-  //       offset: 75
-  //     })
-  //   })
-  // }
-
-
-
-
-
-
-
-
 
   $('.my-slider').unslider({
     animation: 'fade'
