@@ -35,18 +35,18 @@ $(function() {
 
 
 
-    $('a[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-    });
+    // $('a[href*="#"]:not([href="#"])').click(function() {
+    //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    //     var target = $(this.hash);
+    //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    //     if (target.length) {
+    //       $('html, body').animate({
+    //         scrollTop: target.offset().top
+    //       }, 1000);
+    //       return false;
+    //     }
+    //   }
+    // });
 
   $('.menu-arrow').on('click', function(e) {
     e.preventDefault();
@@ -57,110 +57,242 @@ $(function() {
     }
   })
 
-
+  
   // $('.arrow-item').mouseover(function() {
-  //   $(this).velocity('stop', false).velocity({rotateZ: "-180deg"});
+  //   $(this).velocity('stop', false).velocity({translateX: "4px", scaleX: "1.2,1"});
   // });
 
   // $('.arrow-item').mouseleave(function() {
-  //   $(this).velocity('stop', false).velocity({rotateZ: "0deg"});
+  //   $(this).velocity('stop', false).velocity({translateX: "0px", scaleX: "1,1"});
   // });
  
 
 
   // setWaypoints();
 
+  // function bananaWaypoints() {
+  //   var continuousElements = document.getElementsByClassName('continuous-true')
+  //   for (var i = 0; i < continuousElements.length; i++) {
+  //     new Waypoint({
+  //       element: continuousElements[i],
+  //       handler: function(direction) {
+  //         if(direction == 'down') {
+  //           var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //           var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //           var imageMax = getImageMax(this.element.id);
+  //           var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //           $('.slider-info').text(imageFullText);
+  //           console.log('going down ' + this.element.id)
+  //         }
+  //       },
+  //       // context: $('main'),
+  //       offset: 75
+  //     })
+  //     new Waypoint({
+  //       element: continuousElements[i],
+  //       handler: function(direction) {
+  //         if(direction == 'up') {
+  //           var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //           var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //           var imageMax = getImageMax(this.element.id);
+  //           var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //           $('.slider-info').text(imageFullText);
+  //           console.log('going up ' + this.element.id)
+  //           console.log(this.element)
+  //           // alert('hello')
+  //         }
+  //       },
+  //       offset: function() {
+  //         console.log(this.element.clientHeight)
+  //         return -(this.element.clientHeight - 115)
+  //       }
+  //       // offset: -450
+  //     })
+  //   }
+  // }
+
   function setWaypoints() {
-    var continuousElements = document.getElementsByClassName('continuous-true')
-    for (var i = 0; i < continuousElements.length; i++) {
-      new Waypoint({
-        element: continuousElements[i],
-        handler: function() {
-        if($('#' + this.element.id + ' .toggle-text').hasClass('read-more')) {
-          if($('#' + this.element.id + ' ul .unslider-active img').attr('alt') == undefined) {
-            var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
-            var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
-            var imageMax = getImageMax(this.element.id);
-            var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-            $('.slider-info').text(imageFullText);
-          } else {
-            var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
-            var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
-            var imageMax = getImageMax(this.element.id);
-            var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-            $('.slider-info').text(imageFullText);
-          }
-        } else {
-          $('.slider-info').text('');
-        }
-      },
-      offset: 74
-    })
-    }
-  }
-
-  function resetWaypoints() {
-    var continuousElements = document.getElementsByClassName('continuous-true')
-    for (var i = 0; i < continuousElements.length; i++) {
-      new Waypoint({
-        element: continuousElements[i],
-        handler: function() {
-        // console.log(this.element.id)
-        var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
-        var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
-        var imageMax = getImageMax(this.element.id);
-        var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-        $('.slider-info').text(imageFullText);
-      },
-      offset: 75
-    })
-    }
-  }
-
-
-  // context: '.scrollable-element'
-
-  bananaWaypoints()
-  function bananaWaypoints() {
     var continuousElements = document.getElementsByClassName('continuous-true')
     for (var i = 0; i < continuousElements.length; i++) {
       new Waypoint({
         element: continuousElements[i],
         handler: function(direction) {
           if(direction == 'down') {
-            var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
-            var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
-            var imageMax = getImageMax(this.element.id);
-            var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-            $('.slider-info').text(imageFullText);
-            console.log('going down ' + this.element.id)
+            if($('#' + this.element.id + ' .toggle-text').hasClass('read-more')) {
+              if($('#' + this.element.id + ' ul .unslider-active img').attr('alt') == undefined) {
+                var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
+                var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
+                var imageMax = getImageMax(this.element.id);
+                var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+                $('.slider-info').text(imageFullText);
+              } else {
+                var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+                var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+                var imageMax = getImageMax(this.element.id);
+                var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+                $('.slider-info').text(imageFullText);
+              }
+            } else {
+              $('.slider-info').text('');
+            }
           }
         },
-        // context: $('main'),
         offset: 75
       })
       new Waypoint({
         element: continuousElements[i],
         handler: function(direction) {
           if(direction == 'up') {
-            var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
-            var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
-            var imageMax = getImageMax(this.element.id);
-            var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
-            $('.slider-info').text(imageFullText);
-            console.log('going up ' + this.element.id)
-            console.log(this.element)
-            // alert('hello')
+            if($('#' + this.element.id + ' .toggle-text').hasClass('read-more')) {
+              if($('#' + this.element.id + ' ul .unslider-active img').attr('alt') == undefined) {
+                var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
+                var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
+                var imageMax = getImageMax(this.element.id);
+                var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+                $('.slider-info').text(imageFullText);
+              } else {
+                var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+                var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+                var imageMax = getImageMax(this.element.id);
+                var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+                $('.slider-info').text(imageFullText);
+              }
+            } else {
+              $('.slider-info').text('');
+            }
           }
         },
         offset: function() {
           console.log(this.element.clientHeight)
           return -(this.element.clientHeight - 115)
         }
-        // offset: -450
       })
     }
   }
+
+  // function bananaWaypoints() {
+  //   var continuousElements = document.getElementsByClassName('continuous-true')
+  //   for (var i = 0; i < continuousElements.length; i++) {
+  //     new Waypoint({
+  //       element: continuousElements[i],
+  //       handler: function(direction) {
+  //         if(direction == 'down') {
+  //           var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //           var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //           var imageMax = getImageMax(this.element.id);
+  //           var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //           $('.slider-info').text(imageFullText);
+  //           console.log('going down ' + this.element.id)
+  //         }
+  //       },
+  //       // context: $('main'),
+  //       offset: 75
+  //     })
+  //     new Waypoint({
+  //       element: continuousElements[i],
+  //       handler: function(direction) {
+  //         if(direction == 'up') {
+  //           var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //           var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //           var imageMax = getImageMax(this.element.id);
+  //           var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //           $('.slider-info').text(imageFullText);
+  //           console.log('going up ' + this.element.id)
+  //           console.log(this.element)
+  //           // alert('hello')
+  //         }
+  //       },
+  //       offset: function() {
+  //         console.log(this.element.clientHeight)
+  //         return -(this.element.clientHeight - 115)
+  //       }
+  //       // offset: -450
+  //     })
+  //   }
+  // }
+
+  // function setWaypoints() {
+  //   var continuousElements = document.getElementsByClassName('continuous-true')
+  //   for (var i = 0; i < continuousElements.length; i++) {
+  //     new Waypoint({
+  //       element: continuousElements[i],
+  //       handler: function() {
+  //       if($('#' + this.element.id + ' .toggle-text').hasClass('read-more')) {
+  //         if($('#' + this.element.id + ' ul .unslider-active img').attr('alt') == undefined) {
+  //           var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
+  //           var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
+  //           var imageMax = getImageMax(this.element.id);
+  //           var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //           $('.slider-info').text(imageFullText);
+  //         } else {
+  //           var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //           var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //           var imageMax = getImageMax(this.element.id);
+  //           var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //           $('.slider-info').text(imageFullText);
+  //         }
+  //       } else {
+  //         $('.slider-info').text('');
+  //       }
+  //     },
+  //     offset: 74
+  //   })
+  //   }
+  // }
+
+
+  // function setWaypoints() {
+  //   var continuousElements = document.getElementsByClassName('continuous-true')
+  //   for (var i = 0; i < continuousElements.length; i++) {
+  //     new Waypoint({
+  //       element: continuousElements[i],
+  //       handler: function() {
+  //       if($('#' + this.element.id + ' .toggle-text').hasClass('read-more')) {
+  //         if($('#' + this.element.id + ' ul .unslider-active img').attr('alt') == undefined) {
+  //           var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
+  //           var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
+  //           var imageMax = getImageMax(this.element.id);
+  //           var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //           $('.slider-info').text(imageFullText);
+  //         } else {
+  //           var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //           var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //           var imageMax = getImageMax(this.element.id);
+  //           var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //           $('.slider-info').text(imageFullText);
+  //         }
+  //       } else {
+  //         $('.slider-info').text('');
+  //       }
+  //     },
+  //     offset: 74
+  //   })
+  //   }
+  // }
+
+  // function resetWaypoints() {
+  //   var continuousElements = document.getElementsByClassName('continuous-true')
+  //   for (var i = 0; i < continuousElements.length; i++) {
+  //     new Waypoint({
+  //       element: continuousElements[i],
+  //       handler: function() {
+  //       // console.log(this.element.id)
+  //       var imageInfo = ($('#' + this.element.id + ' ul .unslider-active img').attr('alt'))
+  //       var imageNum = ($('#' + this.element.id + ' ul .unslider-active img').attr('data-num'));
+  //       var imageMax = getImageMax(this.element.id);
+  //       var imageFullText = imageInfo + ' ' + imageNum + '/' + imageMax;
+  //       $('.slider-info').text(imageFullText);
+  //     },
+  //     offset: 74
+  //   })
+  //   }
+  // }
+
+
+  // context: '.scrollable-element'
+
+  setWaypoints()
+
 
   //     if(direction == 'down') {
   //       new Waypoint({
@@ -240,7 +372,7 @@ $(function() {
       var imageMax = getImageMax(sectionId);
       $('#' + sectionId + ' h4.image-info').text(imageInfo + ' ' + imageNum + '/' + imageMax);
     };
-    resetWaypoints();
+    setWaypoints();
   });
 
   function getImageMax(sectionId) {
