@@ -43,6 +43,16 @@ $(function() {
   })
 
 
+  // $('.arrow-item').mouseover(function() {
+  //   $(this).velocity('stop', false).velocity({rotateZ: "-180deg"});
+  // });
+
+  // $('.arrow-item').mouseleave(function() {
+  //   $(this).velocity('stop', false).velocity({rotateZ: "0deg"});
+  // });
+ 
+
+
   // setWaypoints();
 
   function setWaypoints() {
