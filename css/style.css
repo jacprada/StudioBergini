@@ -6,20 +6,13 @@ body {
   margin: 0 auto;
   text-align: center;
   background-color: #FFFFFF;
-/*  cursor: default;*/
   width: 100%;
   font-family: 'Times New Roman', Serif;
   font-size: 23px;
   line-height: 1.2;
   color: #fff;
-  -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-/*  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;*/
+  -webkit-font-smoothing: antialiased;
 }
 
 /*header, main {
@@ -37,9 +30,13 @@ h1.intro-studio {
   margin: 0 auto;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
   color: #FFFFFF;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
   -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  transition: all 2s;
 }
 
 h1.intro-bergini {
@@ -48,9 +45,13 @@ h1.intro-bergini {
   margin: 0 auto;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
   color: #000000;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
   -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  transition: all 2s;
 }
 
 div.sidebar {
@@ -62,13 +63,11 @@ div.sidebar {
     left: -33.3%;
     top: 0;
   -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  transition: left 0.5s;
 }
 
 div.centered {
-/*  position: absolute;
-    left: 50%;
-    top: 50%;*/
-/*    transform: translate(-50%,-50%);*/
   padding: 75px 15px 15px 15px;
 }
 
@@ -78,8 +77,8 @@ div.centered {
   width: 100%;
   height: 60px;
   background-color: #FFFFFF;
-  -moz-box-shadow: 0px 10px 15px #ffffff;
   -webkit-box-shadow: 0px 10px 15px #ffffff;
+  -moz-box-shadow: 0px 10px 15px #ffffff;
   box-shadow: 0px 10px 15px #ffffff;
 }
 
@@ -95,9 +94,6 @@ nav.left-navigation {
   width: 33.3%;
   background-color: #FFFFFF;
   padding: 15px 7.5px 15px 15px;
-/*  -webkit-box-shadow: 0px 0px 15px 20px rgba(255,255,255,0.8);
-  -moz-box-shadow: 0px 0px 15px 20px rgba(255,255,255,0.8);
-  box-shadow: 0px 0px 15px 20px rgba(255,255,255,0.8);*/
 }
 
 nav.right-navigation {
@@ -106,22 +102,20 @@ nav.right-navigation {
   float: right;
   background-color: #FFFFFF;
   padding: 15px 15px 15px 7.5px;
-/*  -webkit-box-shadow: 0px 0px 15px 20px rgba(255,255,255,0.8);
-  -moz-box-shadow: 0px 0px 15px 20px rgba(255,255,255,0.8);
-  box-shadow: 0px 0px 15px 20px rgba(255,255,255,0.8);*/
 }
 
 nav.left-navigation.open-menu-nav {
   background-color: transparent;
   -webkit-transition: background-color 0.1s;
-/*  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;*/
+  -moz-transition: background-color 0.1s;
+  transition: background-color 0.1s;
 }
 
 nav.left-navigation.close-menu-nav {
   background-color: #FFFFFF;
   -webkit-transition: background-color 0.20s linear 0.35s;
+  -moz-transition: background-color 0.20s linear 0.35s;
+  transition: background-color 0.20s linear 0.35s;
 }
 
 ul {
@@ -181,30 +175,38 @@ a {
 
 .open-menu {
   color: #FFFFFF;
-  -ms-transform: rotate(-180deg);
+  opacity: 1;
   -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
   transform: rotate(-180deg);
   -webkit-transition: color 0.5s, transform 0.75s, opacity 0.75s;
-  opacity: 1;
+  -moz-transition: color 0.5s, transform 0.75s, opacity 0.75s;
+  transition: color 0.5s, transform 0.75s, opacity 0.75s;
 }
 
 .close-menu {
   color: #000000;
-  -ms-transform: rotate(0deg);
+  opacity: 1;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: color 0.75s, transform 0.75s, opacity 0.75s;
-  opacity: 1;
+  -moz-transition: color 0.75s, transform 0.75s, opacity 0.75s;
+  transition: color 0.75s, transform 0.75s, opacity 0.75s;
 }
 
 .open-menu-link {
   color: #FFFFFF;
   -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .close-menu-link {
   color: #000000;
   -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 section.about {
@@ -279,12 +281,10 @@ a.unslider-arrow {
 }
 
 a.prev {
-  /*  cursor: w-resize;*/
   cursor: pointer;
 }
 
 a.next {
-  /*  cursor: e-resize;*/
   cursor: pointer;
 }
 
@@ -308,6 +308,8 @@ a.toggle-text.open-menu-toggle {
 a.toggle-text.close-menu-toggle {
   color: #000000;
   -webkit-transition: color 2s;
+  -moz-transition: color 2s;
+  transition: color 2s;
 }
 
 p.text-center {
@@ -327,12 +329,13 @@ p.text-right {
 
 p.open-menu-text {
   color: #FFFFFF;
-/*  -webkit-transition: color 0.1s ease-out;*/
 }
 
 p.close-menu-text {
   color: #000000;
   -webkit-transition: color 2s;
+  -moz-transition: color 2s;
+  transition: color 2s;
 }
 
 img {
