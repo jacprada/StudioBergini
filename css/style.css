@@ -68,7 +68,7 @@ div.sidebar {
 }
 
 div.centered {
-  padding: 75px 15px 15px 15px;
+  padding: 75px 15px 0px 15px;
 }
 
 .hidden-header {
@@ -238,7 +238,7 @@ section.project {
 }
 
 div.project-container {
-  height: 560px;
+  height: 580px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -357,7 +357,7 @@ img {
 }
 
 h1.work-author {
-  padding-top: 15px;
+  padding-top: 30px;
   padding-left: 35%;
   color: #000000;
 }
