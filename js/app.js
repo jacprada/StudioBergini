@@ -164,7 +164,7 @@ $(function() {
         },
         offset: function() {
           console.log(this.element.clientHeight)
-          return -(this.element.clientHeight - 115)
+          return -(this.element.clientHeight - 75)
         }
       })
     }
@@ -402,9 +402,14 @@ $(function() {
   // setTimeout(introAnimation, 1000);
   // setTimeout(outroAnimation, 2000);
 
-  $('.home-link').on('click', function() {
-    $('body').animate({ scrollTop: 0 }, 1000);
+  $('.home-link').on('click', function(e) {
+    e.preventDefault();
+    $('body, html').animate({ scrollTop: 0 }, 1000);
   })
+
+  $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+        $('html, body').stop();
+    });
   
   $('.toggle-text').on('click', function(e) {
     e.preventDefault();

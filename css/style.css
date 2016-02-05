@@ -238,7 +238,7 @@ section.project {
 }
 
 div.project-container {
-  height: 580px;
+  height: 600px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -322,6 +322,7 @@ a.toggle-text.close-menu-toggle {
 }
 
 p.text-center {
+  float: left;
   width: 49.5%;
   padding-right: 7.5px;
   padding-left: 7.5px;
@@ -357,7 +358,7 @@ img {
 }
 
 h1.work-author {
-  padding-top: 30px;
+  padding-top: 15px;
   padding-left: 35%;
   color: #000000;
 }
