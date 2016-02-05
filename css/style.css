@@ -238,6 +238,8 @@ section.project {
 }
 
 div.project-container {
+  height: 560px;
+  background-color: red;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -267,6 +269,8 @@ div.project-bottom {
   width: 100%;
   clear: both;
   text-align: left;
+  position: absolute;
+  bottom: 0;
 }
 
 div.my-slider {
@@ -366,6 +370,7 @@ h2.work-title {
 }
 
 h3.work-type {
+  padding-bottom: 15px;
   padding-left: 35%;
   color: #000000;
 }
