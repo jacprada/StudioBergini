@@ -1,6 +1,6 @@
-$(window).on('beforeunload', function(){
-  $(window).scrollTop(0);
-});
+// $(window).on('beforeunload', function(){
+//   $(window).scrollTop(0);
+// });
 
 function openMenu() {
   $('.menu-arrow').removeClass('close-menu');
@@ -57,6 +57,8 @@ $(function() {
   // $('.arrow-item').mouseleave(function() {
   //   $(this).velocity('stop', false).velocity({translateX: "0px", scaleX: "1,1"});
   // });
+
+getImageInfo();
 
   function setWaypoints() {
     var continuousElements = document.getElementsByClassName('continuous-true')
@@ -119,7 +121,7 @@ $(function() {
 
   setWaypoints()
 
-  getImageInfo();
+
 
   function getImageInfo() {
     var sections = $('section.project');
