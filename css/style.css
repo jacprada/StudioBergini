@@ -237,6 +237,12 @@ section.project {
   padding-bottom: 15px;
 }
 
+div.project-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 div.project-top {
   display: none;
   width: 99.9%;
