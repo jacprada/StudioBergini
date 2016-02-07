@@ -231,15 +231,14 @@ h6.about-credits {
   bottom: 15px;
 }
 
-section.project {
+.anchor{
   display: block;
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 75px);
-  padding-bottom: 15px;
+  height: 75px; /*same height as header*/
+  margin-top: -75px; /*same height as header*/
+  visibility: hidden;
 }
 
-#first-project {
+section.project {
   display: block;
   position: relative;
   width: 100%;
