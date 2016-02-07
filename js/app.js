@@ -27,6 +27,12 @@ $(function() {
 
   // setWaypoints()
 
+  var pathname = window.location.pathname; // Returns path only
+  var url      = window.location.href;     // Returns full URL
+
+  console.log(pathname);
+  console.log(url);
+
 
 
   function introAnimation(){
