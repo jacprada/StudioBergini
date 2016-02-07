@@ -253,8 +253,9 @@ div.project-container {
 
 div.project-top {
   display: none;
-  width: 99.9%;
+  width: 100%;
   text-align: right;
+  padding-bottom: 15px;
 }
 
 div.project-left {
@@ -302,6 +303,10 @@ a.prev {
 
 a.next {
   cursor: pointer;
+}
+
+h4.image-info {
+  color: #000000;
 }
 
 p.text-left {
@@ -380,4 +385,43 @@ h3.work-type {
   padding-bottom: 15px;
   padding-left: calc(33.3% + 15px);
   color: #000000;
+}
+
+/*RESPONSIVE WEBSITE*/
+
+@media only screen and (max-width: 1000px) {
+  nav.left-navigation {
+    width: 100%;
+  }
+
+  nav.right-navigation {
+    display: none;
+  }
+
+  div.sidebar {
+    width: 100%;
+    left: -100%;
+  }
+
+  div.project-top {
+    display: block;
+    width: 100%;
+  }
+
+
+
+  div.project-left {
+    display: none;
+  }
+
+  div.project-right {
+    width: 100%;
+  }
+
+  h1.work-author,
+  h2.work-title,
+  h3.work-type  {
+    padding-left: 0;
+  }
+
 }
