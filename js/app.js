@@ -33,7 +33,9 @@ $(function() {
     var hash  = "#"
       if (url.indexOf(hash) >= 0) {
           console.log("yes");
-          setWaypoints();
+          setTimeout(introAnimation, 00);
+          setTimeout(outroAnimation, 00);
+          setTimeout(setWaypoints, 10);
       } else {
           console.log("no");
           setTimeout(introAnimation, 1000);
@@ -43,6 +45,8 @@ $(function() {
   }
 
   checkForHash();
+
+
 
 
 
