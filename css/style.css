@@ -239,8 +239,6 @@ h6.about-credits {
 }
 
 section.project {
-  display: block;
-  position: relative;
   width: 100%;
   height: calc(100vh - 75px);
   padding-bottom: 15px;
