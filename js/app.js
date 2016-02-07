@@ -86,6 +86,7 @@ $(function() {
     var windowWidth = $(window).width()
 
     if (windowWidth < 1000) {
+      // getImageHeight()
       $('.menu-arrow').on('click', function(e) {
         e.preventDefault();
         if( $(this).hasClass('open-menu')) {
@@ -107,7 +108,29 @@ $(function() {
   }
 
 
+// function getImageHeight() {
+//   var sections = $('section.project')
+//   for (var i = 0; i < sections.length; i++) {
+//     var sectionId = sections[i].id
 
+    
+//     var imageHeight = getImageMin(sectionId);
+//     console.log(imageHeight);
+
+//   };
+//   // 
+  
+// }
+
+// function getImageMin(sectionId) {
+//   var maximum = null;
+//   $('#' + sectionId + ' ul li img').each(function() {
+//     console.log($(this).context)
+//     var value = parseFloat($(this).context.height());
+//     maximum = (value > maximum) ? value : maximum;
+//   });
+//   return maximum
+// }
 
 
 

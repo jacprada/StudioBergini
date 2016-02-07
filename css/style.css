@@ -390,6 +390,10 @@ h3.work-type {
 /*RESPONSIVE WEBSITE*/
 
 @media only screen and (max-width: 1000px) {
+  html {
+      height: 100%;
+  }
+
   nav.left-navigation {
     width: 100%;
   }
@@ -406,10 +410,11 @@ h3.work-type {
   section.project {
     min-height: 100%;
     overflow: hidden;
+    padding-bottom: 0;
   }
 
   div.project-container {
-    height: 100%;
+    height: auto;
   }
 
   div.project-top {
@@ -423,22 +428,26 @@ h3.work-type {
 
   div.project-right {
     width: 100%;
+/*    height: auto;*/
   }
 
   div.my-slider {
-    height: 100%;
+    width: 100%;
+    height: 250px;
   }
 
   div.unslider {
-    height: 100%;
+    width: 100%;
+    height: 250px;
   }
 
   a.unslider-arrow {
-    height: 100px;
+      height: 250px;
   }
 
   img {
-    height: auto;
+    height: 250px;
+    padding: 0;
   }
 
 /*  ul {
