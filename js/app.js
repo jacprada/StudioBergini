@@ -27,11 +27,18 @@ $(function() {
 
   // setWaypoints()
 
-  var pathname = window.location.pathname; // Returns path only
-  var url      = window.location.href;     // Returns full URL
 
-  console.log(pathname);
-  console.log(url);
+  function checkForHash() {
+    var url   = window.location.href;     // Returns full URL
+    var hash  = "#"
+      if (url.indexOf(hash) >= 0) {
+          console.log("yes");
+      } else {
+          console.log("no");
+      }
+  }
+
+  checkForHash();
 
 
 
