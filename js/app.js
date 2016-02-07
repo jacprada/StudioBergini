@@ -318,11 +318,11 @@ getImageInfo();
       var textLeft = $('#' + sectionId + ' .text-left').text().slice(0,-6);
       var textCenter = $('#' + sectionId + ' .text-center').text();
       var textRight = $('#' + sectionId + ' .text-right').text();
-      $('#' + sectionId + ' .responsive-text').append('<p>'+ textLeft + '</p>' + '<br>' + '<p>'+ textCenter + '</p>'  + '<br>' +  '<p>'+ textRight + '</p>');
+      $('#' + sectionId + ' .project-mobile').append('<p>'+ textLeft + '</p>' + '<br>' + '<p>'+ textCenter + '</p>'  + '<br>' +  '<p>'+ textRight + '</p>');
      }
 
      function removeMobileProjectText(sectionId){
-      $('#' + sectionId + ' .responsive-text').empty();
+      $('#' + sectionId + ' .project-mobile').empty();
      }
 
 });
