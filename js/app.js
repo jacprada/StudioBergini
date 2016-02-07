@@ -25,7 +25,25 @@ function closeMenu() {
 
 $(function() {
 
-  setWaypoints()
+  // setWaypoints()
+
+
+
+  function introAnimation(){
+    $(".intro").css("background-color", "#FFFFFF");
+    $(".intro-studio").css("display", "none");
+    $(".intro-bergini").css("display", "block");
+  }
+
+  function outroAnimation(){
+    $(".intro").css("display", "none");
+    $("header").css("display", "block");
+    $("main").css("display", "block");
+  }
+
+  setTimeout(introAnimation, 1000);
+  setTimeout(outroAnimation, 2000);
+  setTimeout(setWaypoints, 2000);
 
     // $('a[href*="#"]:not([href="#"])').click(function() {
     //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -163,20 +181,7 @@ getImageInfo();
 
   
 
-  // function introAnimation(){
-  //   $(".intro").css("background-color", "#FFFFFF");
-  //   $(".intro-studio").css("display", "none");
-  //   $(".intro-bergini").css("display", "block");
-  // }
 
-  // function outroAnimation(){
-  //   $(".intro").css("display", "none");
-  //   $("header").css("display", "block");
-  //   $("main").css("display", "block");
-  // }
-
-  // setTimeout(introAnimation, 1000);
-  // setTimeout(outroAnimation, 2000);
 
   $('.home-link').on('click', function(e) {
     e.preventDefault();
