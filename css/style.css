@@ -403,12 +403,19 @@ h3.work-type {
     left: -100%;
   }
 
+  section.project {
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  div.project-container {
+    height: 100%;
+  }
+
   div.project-top {
     display: block;
     width: 100%;
   }
-
-
 
   div.project-left {
     display: none;
@@ -416,6 +423,30 @@ h3.work-type {
 
   div.project-right {
     width: 100%;
+  }
+
+  div.my-slider {
+    height: 100%;
+  }
+
+  div.unslider {
+    height: 100%;
+  }
+
+  a.unslider-arrow {
+    height: 100px;
+  }
+
+  img {
+    height: auto;
+  }
+
+/*  ul {
+    height: 100%;
+  }*/
+
+  div.project-bottom {
+    position: relative;
   }
 
   h1.work-author,
