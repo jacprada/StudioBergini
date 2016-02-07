@@ -33,8 +33,12 @@ $(function() {
     var hash  = "#"
       if (url.indexOf(hash) >= 0) {
           console.log("yes");
+          setWaypoints();
       } else {
           console.log("no");
+          setTimeout(introAnimation, 1000);
+          setTimeout(outroAnimation, 2000);
+          setTimeout(setWaypoints, 2000);
       }
   }
 
@@ -54,9 +58,7 @@ $(function() {
     $("main").css("display", "block");
   }
 
-  setTimeout(introAnimation, 1000);
-  setTimeout(outroAnimation, 2000);
-  setTimeout(setWaypoints, 2000);
+
 
     // $('a[href*="#"]:not([href="#"])').click(function() {
     //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
