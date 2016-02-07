@@ -394,9 +394,6 @@ h6.toggle-text-mobile {
 /*RESPONSIVE WEBSITE*/
 
 @media only screen and (max-width: 1000px) {
-  html {
-      height: 100%;
-  }
 
   nav.left-navigation {
     width: 100%;
