@@ -280,6 +280,10 @@ div.project-bottom {
   bottom: 0;
 }
 
+div.project-mobile {
+  display: none;
+}
+
 div.my-slider {
   height: 450px;
 }
@@ -409,7 +413,7 @@ h6.toggle-text-mobile {
   }
 
   section.project {
-    min-height: calc(100vh - 75px);
+/*    min-height: calc(100vh - 75px);*/
     height: 100%;
     overflow: hidden;
     padding-bottom: 0;
@@ -458,6 +462,7 @@ h6.toggle-text-mobile {
 
 
   div.project-mobile {
+    display: block;
     margin: 15px 0 30px 0;
     color: #000000;
     text-align: left;
