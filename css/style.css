@@ -412,6 +412,7 @@ h6.toggle-text-mobile {
   }
 
   section.project {
+    min-height: calc(100vh - 75px);
     height: 100%;
     overflow: hidden;
     padding-bottom: 0;
