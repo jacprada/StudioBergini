@@ -232,10 +232,11 @@ h6.about-credits {
 }
 
 .anchor{
+/*  background-color: red;
   display: block;
-  height: 75px; /*same height as header*/
-  margin-top: -75px; /*same height as header*/
-  visibility: hidden;
+  height: 75px;
+  margin-top: -75px;*/
+/*  visibility: hidden;*/
 }
 
 section.project {
