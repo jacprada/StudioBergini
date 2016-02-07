@@ -376,7 +376,7 @@ h3.work-type {
 }
 
 /*div.project-right::selection,*/
-p.text-left::selection,
+/*p.text-left::selection,
 p.text-center::selection,
 p.text-right::selection,
 h1.work-author::selection,
@@ -399,4 +399,4 @@ i.menu-arrow.open-menu::selection {
   color: #000000; 
   background: #FFFFFF;
   text-shadow: none;
-}
+}*/
