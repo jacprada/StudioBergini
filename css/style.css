@@ -239,6 +239,14 @@ section.project {
   padding-bottom: 15px;
 }
 
+#first-project {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 75px);
+  padding-bottom: 15px;
+}
+
 div.project-container {
   height: 600px;
   position: relative;
