@@ -387,6 +387,10 @@ h3.work-type {
   color: #000000;
 }
 
+h6.toggle-text-mobile {
+  display: none;
+}
+
 /*RESPONSIVE WEBSITE*/
 
 @media only screen and (max-width: 1000px) {
@@ -450,9 +454,10 @@ h3.work-type {
     padding: 0;
   }
 
-/*  ul {
-    height: 100%;
-  }*/
+  .responsive-text p{
+    color: #000;
+    text-align: left;
+  } 
 
   div.project-bottom {
     position: relative;
@@ -462,6 +467,13 @@ h3.work-type {
   h2.work-title,
   h3.work-type  {
     padding-left: 0;
+  }
+
+  h6.toggle-text-mobile {
+    cursor: pointer;
+    display: block;
+    color: #000000;
+    font-style: italic;
   }
 
 }

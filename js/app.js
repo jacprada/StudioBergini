@@ -108,6 +108,7 @@ $(function() {
   }
 
 
+
 // function getImageHeight() {
 //   var sections = $('section.project')
 //   for (var i = 0; i < sections.length; i++) {
@@ -296,5 +297,32 @@ getImageInfo();
     $(this).addClass('read-more');
   }
 })
+
+    $('.toggle-text-mobile').on('click', function(e) {
+      e.preventDefault();
+      var sectionId = $(this).parents('section')[0].id;
+      if($(this).hasClass('read-more-mobile')) {
+      addMobileProjectText(sectionId)
+      $(this).text('(less)');
+      $(this).removeClass('read-more-mobile');
+      $(this).addClass('read-less-mobile');
+    } else {
+      removeMobileProjectText(sectionId)
+      $(this).text('(more)');
+      $(this).removeClass('read-less-mobile');
+      $(this).addClass('read-more-mobile');
+    }
+  })
+
+    function addMobileProjectText(sectionId){
+      var textLeft = $('#' + sectionId + ' .text-left').text().slice(0,-6);
+      var textCenter = $('#' + sectionId + ' .text-center').text();
+      var textRight = $('#' + sectionId + ' .text-right').text();
+      $('#' + sectionId + ' .responsive-text').append('<p>'+ textLeft + '</p>' + '<br>' + '<p>'+ textCenter + '</p>'  + '<br>' +  '<p>'+ textRight + '</p>');
+     }
+
+     function removeMobileProjectText(sectionId){
+      $('#' + sectionId + ' .responsive-text').empty();
+     }
 
 });
