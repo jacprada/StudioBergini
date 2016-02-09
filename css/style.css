@@ -399,6 +399,10 @@ h6.toggle-text-mobile {
 
 @media only screen and (max-width: 1000px) {
 
+  body.open-menu-main {
+    overflow: hidden;
+  }
+
   h1.intro-studio {
     font-size: 100px;
   }
@@ -418,6 +422,12 @@ h6.toggle-text-mobile {
   div.sidebar {
     width: 100%;
     left: -100%;
+  }
+
+  h1.about-contact,
+  p.about-text,
+  h6.about-credits {
+    font-size: 18px;
   }
 
   section.project {

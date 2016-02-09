@@ -29,7 +29,7 @@ function closeMenu() {
   $('.menu-arrow').removeClass('open-menu');
   $('.menu-arrow').addClass('close-menu');
   $('.home-link').removeClass('open-menu-link');
-  $('.home-link').addClass('close-menu-link');+
+  $('.home-link').addClass('close-menu-link');
   $('.left-navigation').removeClass('open-menu-nav');
   $('.left-navigation').addClass('close-menu-nav');
   $('.sidebar').css('left', '-33.3%');
@@ -38,6 +38,8 @@ function closeMenu() {
 function openMenuMobile() {
   $('.menu-arrow').removeClass('close-menu');
   $('.menu-arrow').addClass('open-menu');
+  $('body').removeClass('close-menu-main');
+  $('body').addClass('open-menu-main');
   $('.home-link').removeClass('close-menu-link');
   $('.home-link').addClass('open-menu-link');
   $('.left-navigation').removeClass('close-menu-nav');
@@ -49,6 +51,8 @@ function closeMenuMobile() {
   $('.sidebar').show();
   $('.menu-arrow').removeClass('open-menu');
   $('.menu-arrow').addClass('close-menu');
+  $('body').removeClass('open-menu-main');
+  $('body').addClass('close-menu-main');
   $('.home-link').removeClass('open-menu-link');
   $('.home-link').addClass('close-menu-link');+
   $('.left-navigation').removeClass('open-menu-nav');
