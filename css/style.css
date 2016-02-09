@@ -399,6 +399,14 @@ h6.toggle-text-mobile {
 
 @media only screen and (max-width: 1000px) {
 
+  h1.intro-studio {
+    font-size: 100px;
+  }
+
+  h1.intro-bergini {
+    font-size: 100px;
+  }
+
   nav.left-navigation {
     width: 100%;
   }

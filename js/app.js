@@ -68,7 +68,7 @@ $(function() {
     var hash = "#"
     var windowWidth = $(window).width()
 
-    if (url.indexOf(hash) >= 0 || windowWidth < 1000) {
+    if (url.indexOf(hash) >= 0) {
       console.log("yes");
       setTimeout(introAnimation, 00);
       setTimeout(outroAnimation, 00);
