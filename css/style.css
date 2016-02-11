@@ -470,7 +470,6 @@ h6.toggle-text-mobile {
 
   a.unslider-arrow {
       height: 350px;
-      display: none;
   }
 
   img {
@@ -507,9 +506,12 @@ h6.toggle-text-mobile {
 @media only screen and (max-width: 600px) {
 
   h1.about-contact,
-  p.about-text,
-  h6.about-credits {
+  p.about-text {
     font-size: 18px;
+  }
+
+  h6.about-credits {
+    display: none;
   }
 
   div.my-slider {
