@@ -111,6 +111,17 @@ $(function() {
     }
   }
 
+  // var slides = $('.slides'),
+  //     i = 0;
+
+  // slides
+  // .on('swipeleft', function(e) {
+  //     unslider.prev();
+  // })
+  // .on('swiperight', function(e) {
+  //     unslider.next();
+  // });
+
 
 
 // function getImageHeight() {
@@ -246,6 +257,21 @@ getImageInfo();
   $('.my-slider').unslider({
     animation: 'fade'
   });
+
+
+
+  // data = unslider.data('unslider');
+
+  // var slides = $('.slides'),
+  //     i = 0;
+
+  // slides
+  // .on('swipeleft', function(e) {
+  //     data.prev();
+  // })
+  // .on('swiperight', function(e) {
+  //     data.next();
+  // })
 
   $('.prev, .next').on('click', function() {
     var sections = $('section.project');

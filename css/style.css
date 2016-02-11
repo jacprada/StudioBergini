@@ -395,15 +395,15 @@ h6.toggle-text-mobile {
   display: none;
 }
 
+*:active {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+  tap-highlight-color: rgba(0,0,0,0);
+}
+
 /*RESPONSIVE WEBSITE*/
 
 @media only screen and (max-width: 1000px) {
-
-  *:active {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -moz-tap-highlight-color: rgba(0,0,0,0);
-    tap-highlight-color: rgba(0,0,0,0);
-  }
 
   body.open-menu-main {
     overflow: hidden;
@@ -470,6 +470,7 @@ h6.toggle-text-mobile {
 
   a.unslider-arrow {
       height: 350px;
+      display: none;
   }
 
   img {
