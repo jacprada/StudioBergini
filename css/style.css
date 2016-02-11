@@ -399,6 +399,12 @@ h6.toggle-text-mobile {
 
 @media only screen and (max-width: 1000px) {
 
+  *:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    tap-highlight-color: rgba(0,0,0,0);
+  }
+
   body.open-menu-main {
     overflow: hidden;
   }
@@ -477,8 +483,6 @@ h6.toggle-text-mobile {
     padding: 0;
   }
 
-
-
   div.project-mobile {
     display: block;
     margin: 15px 0 30px 0;
@@ -502,5 +506,9 @@ h6.toggle-text-mobile {
     color: #000000;
     font-style: italic;
   }
+
+}
+
+@media only screen and (max-width: 600px) {
 
 }
