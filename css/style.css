@@ -175,24 +175,24 @@ a {
 
 .open-menu {
   color: #FFFFFF;
-  opacity: 1;
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-  -webkit-transition: color 0.5s, transform 0.75s, opacity 0.75s;
-  -moz-transition: color 0.5s, transform 0.75s, opacity 0.75s;
-  transition: color 0.5s, transform 0.75s, opacity 0.75s;
+/*  opacity: 1;*/
+  -webkit-transform: translateY(3.5px) rotate(-180deg);
+  -moz-transform: translateY(3.5px) rotate(-180deg);
+  transform: translateY(3.5px) rotate(-180deg);
+  -webkit-transition: color 0.5s, transform 0.5s;
+  -moz-transition: color 0.5s, transform 0.5s;
+  transition: color 0.5s, transform 0.5s;
 }
 
 .close-menu {
   color: #000000;
-  opacity: 1;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: color 0.75s, transform 0.75s, opacity 0.75s;
-  -moz-transition: color 0.75s, transform 0.75s, opacity 0.75s;
-  transition: color 0.75s, transform 0.75s, opacity 0.75s;
+/*  opacity: 1;*/
+  -webkit-transform: translateY(0px) rotate(0deg);
+  -moz-transform: translateY(0px) rotate(0deg);
+  transform: translateY(0px) rotate(0deg);
+  -webkit-transition: color 0.75s, transform 0.5s;
+  -moz-transition: color 0.75s, transform 0.5s;
+  transition: color 0.75s, transform 0.5s;
 }
 
 .open-menu-link {
