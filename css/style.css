@@ -484,10 +484,18 @@ h6.toggle-text-mobile {
     position: relative;
   }
 
-  h1.work-author,
-  h2.work-title,
+  h1.work-author {
+    padding-top: 15px;
+    padding-left: 0;
+  }
+
+  h2.work-title {
+    padding-left: 0;
+  }
+
   h3.work-type  {
     padding-left: 0;
+    padding-bottom: 15px;
   }
 
   h6.toggle-text-mobile {
