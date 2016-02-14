@@ -17,8 +17,8 @@ function outroAnimation(){
 function openMenu() {
   $('.menu-arrow').removeClass('close-menu');
   $('.menu-arrow').addClass('open-menu');
-  $('.home-link').removeClass('close-menu-link');
-  $('.home-link').addClass('open-menu-link');
+  $('.home-link').removeClass('close-menu');
+  $('.home-link').addClass('open-menu');
   $('.left-navigation').removeClass('close-menu-nav');
   $('.left-navigation').addClass('open-menu-nav');
   $('.sidebar').css('left', '0px');
@@ -28,8 +28,8 @@ function closeMenu() {
   $('.sidebar').show();
   $('.menu-arrow').removeClass('open-menu');
   $('.menu-arrow').addClass('close-menu');
-  $('.home-link').removeClass('open-menu-link');
-  $('.home-link').addClass('close-menu-link');
+  $('.home-link').removeClass('open-menu');
+  $('.home-link').addClass('close-menu');
   $('.left-navigation').removeClass('open-menu-nav');
   $('.left-navigation').addClass('close-menu-nav');
   $('.sidebar').css('left', '-33.3%');
@@ -91,7 +91,7 @@ $(function() {
 
     if (windowWidth < 1000) {
       // getImageHeight()
-      $('.menu-arrow').on('click', function(e) {
+      $('.menu-arrow, .home-link').on('click', function(e) {
         e.preventDefault();
         if( $(this).hasClass('open-menu')) {
           closeMenuMobile();
@@ -100,7 +100,7 @@ $(function() {
         }
       })
     } else {
-      $('.menu-arrow').on('click', function(e) {
+      $('.menu-arrow, .home-link').on('click', function(e) {
         e.preventDefault();
         if( $(this).hasClass('open-menu')) {
           closeMenu();
@@ -296,18 +296,14 @@ getImageInfo();
   }
 
 
-  
+  // $('.home-link').on('click', function(e) {
+  //   e.preventDefault();
+  //   $('body, html').animate({ scrollTop: 0 }, 1000);
+  // })
 
-
-
-  $('.home-link').on('click', function(e) {
-    e.preventDefault();
-    $('body, html').animate({ scrollTop: 0 }, 1000);
-  })
-
-  $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
-        $('html, body').stop();
-    });
+  // $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+  //       $('html, body').stop();
+  //   });
   
   $('.toggle-text').on('click', function(e) {
     e.preventDefault();
