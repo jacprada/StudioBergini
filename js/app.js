@@ -304,6 +304,29 @@ getImageInfo();
   // $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
   //       $('html, body').stop();
   //   });
+
+function addMobileProjectText(sectionId){
+  var textLeft = $('#' + sectionId + ' .text-left').text().slice(0,-6);
+  var textCenter = $('#' + sectionId + ' .text-center').text();
+  var textRight = $('#' + sectionId + ' .text-right').text();
+  $('#' + sectionId + ' .project-mobile').append('<p>'+ textLeft + '</p>' + '<br>' + '<p>'+ textCenter + '</p>'  + '<br>' +  '<p>'+ textRight + '</p>' + '<h6 class="extra-mobile-toggle">(less)</h6>');
+
+    $('.extra-mobile-toggle').on('click', function(e) {
+      e.preventDefault();
+      var sectionId = $(this).parents('section')[0].id;
+      removeMobileProjectText(sectionId);
+      $('#' + sectionId + ' .toggle-text-mobile').text('(more)');
+      $('#' + sectionId + ' .toggle-text-mobile').removeClass('read-less-mobile');
+      $('#' + sectionId + ' .toggle-text-mobile').addClass('read-more-mobile');
+      var tag = $("#"+sectionId+"");
+      // var sectionId = $(this).parents('section')[0].id;
+      $('html,body').animate({scrollTop: tag.offset().top});
+  })
+}
+
+function removeMobileProjectText(sectionId){
+  $('#' + sectionId + ' .project-mobile').empty();
+}
   
   $('.toggle-text').on('click', function(e) {
     e.preventDefault();
@@ -340,16 +363,5 @@ getImageInfo();
       $(this).addClass('read-more-mobile');
     }
   })
-
-    function addMobileProjectText(sectionId){
-      var textLeft = $('#' + sectionId + ' .text-left').text().slice(0,-6);
-      var textCenter = $('#' + sectionId + ' .text-center').text();
-      var textRight = $('#' + sectionId + ' .text-right').text();
-      $('#' + sectionId + ' .project-mobile').append('<p>'+ textLeft + '</p>' + '<br>' + '<p>'+ textCenter + '</p>'  + '<br>' +  '<p>'+ textRight + '</p>');
-     }
-
-     function removeMobileProjectText(sectionId){
-      $('#' + sectionId + ' .project-mobile').empty();
-     }
 
 });
