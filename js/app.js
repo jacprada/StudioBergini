@@ -79,9 +79,9 @@ $(function() {
       setTimeout(setWaypoints, 10);
     } else {
       console.log("no");
-      setTimeout(introAnimation, 1000);
-      setTimeout(outroAnimation, 2000);
-      setTimeout(setWaypoints, 2000);
+      setTimeout(introAnimation, 500);
+      setTimeout(outroAnimation, 1000);
+      setTimeout(setWaypoints, 1000);
     }
   }
 
