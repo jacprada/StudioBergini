@@ -40,8 +40,8 @@ function openMenuMobile() {
   $('.menu-arrow').addClass('open-menu');
   $('body').removeClass('close-menu-main');
   $('body').addClass('open-menu-main');
-  $('.home-link').removeClass('close-menu-link');
-  $('.home-link').addClass('open-menu-link');
+  $('.home-link').removeClass('close-menu');
+  $('.home-link').addClass('open-menu');
   $('.left-navigation').removeClass('close-menu-nav');
   $('.left-navigation').addClass('open-menu-nav');
   $('.sidebar').css('left', '0px');
@@ -53,8 +53,8 @@ function closeMenuMobile() {
   $('.menu-arrow').addClass('close-menu');
   $('body').removeClass('open-menu-main');
   $('body').addClass('close-menu-main');
-  $('.home-link').removeClass('open-menu-link');
-  $('.home-link').addClass('close-menu-link');+
+  $('.home-link').removeClass('open-menu');
+  $('.home-link').addClass('close-menu');+
   $('.left-navigation').removeClass('open-menu-nav');
   $('.left-navigation').addClass('close-menu-nav');
   $('.sidebar').css('left', '-100%');

@@ -175,9 +175,9 @@ a {
 
 .menu-arrow.open-menu {
   color: #FFFFFF;
-  -webkit-transform: translateY(3.5px) rotate(-180deg);
-  -moz-transform: translateY(3.5px) rotate(-180deg);
-  transform: translateY(3.5px) rotate(-180deg);
+  -webkit-transform: translateY(2.5px) rotate(-180deg);
+  -moz-transform: translateY(2.5px) rotate(-180deg);
+  transform: translateY(2.5px) rotate(-180deg);
   -webkit-transition: color 0.5s, transform 0.5s;
   -moz-transition: color 0.5s, transform 0.5s;
   transition: color 0.5s, transform 0.5s;
