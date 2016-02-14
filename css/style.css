@@ -175,7 +175,6 @@ a {
 
 .open-menu {
   color: #FFFFFF;
-/*  opacity: 1;*/
   -webkit-transform: translateY(3.5px) rotate(-180deg);
   -moz-transform: translateY(3.5px) rotate(-180deg);
   transform: translateY(3.5px) rotate(-180deg);
@@ -186,7 +185,6 @@ a {
 
 .close-menu {
   color: #000000;
-/*  opacity: 1;*/
   -webkit-transform: translateY(0px) rotate(0deg);
   -moz-transform: translateY(0px) rotate(0deg);
   transform: translateY(0px) rotate(0deg);
