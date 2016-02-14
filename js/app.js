@@ -314,13 +314,15 @@ function addMobileProjectText(sectionId){
     $('.extra-mobile-toggle').on('click', function(e) {
       e.preventDefault();
       var sectionId = $(this).parents('section')[0].id;
+      var section = $(this).parents('section')[0];
+      var anchor = section.siblings('.anchor');
       removeMobileProjectText(sectionId);
       $('#' + sectionId + ' .toggle-text-mobile').text('(more)');
       $('#' + sectionId + ' .toggle-text-mobile').removeClass('read-less-mobile');
       $('#' + sectionId + ' .toggle-text-mobile').addClass('read-more-mobile');
-      var tag = $("#"+sectionId+"");
-      // var sectionId = $(this).parents('section')[0].id;
-      $('html,body').animate({scrollTop: tag.offset().top});
+      console.log(anchor)
+      // var tatg = $(this).parents('.anchor')[0].id;
+      // $('html,body').animate({scrollTop: anchor.offset().top});
   })
 }
 
