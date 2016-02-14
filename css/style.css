@@ -62,6 +62,17 @@ div.sidebar {
   position: fixed;
     left: -33.3%;
     top: 0;
+}
+
+div.sidebar.open-menu {
+  left: 0;
+  -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  transition: left 0.5s;
+}
+
+div.sidebar.close-menu {
+  left: -33.3%;
   -webkit-transition: left 0.5s;
   -moz-transition: left 0.5s;
   transition: left 0.5s;
@@ -424,6 +435,23 @@ h6.toggle-text-mobile {
   div.sidebar {
     width: 100%;
     left: -100%;
+    -webkit-transition: left 0s;
+    -moz-transition: left 0s;
+    transition: left 0s;
+  }
+
+  div.sidebar.open-menu {
+    left: 0;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    transition: left 0.5s;
+  }
+
+  div.sidebar.close-menu {
+    left: -100%;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    transition: left 0.5s;
   }
 
   section.project {
