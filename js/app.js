@@ -255,7 +255,8 @@ getImageInfo();
   }
 
   $('.my-slider').unslider({
-    animation: 'fade'
+    animation: 'fade',
+    speed: 400
   });
 
 
