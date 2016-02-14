@@ -74,9 +74,10 @@ $(function() {
 
     if (url.indexOf(hash) >= 0) {
       console.log("yes");
-      setTimeout(introAnimation, 00);
-      setTimeout(outroAnimation, 00);
-      setTimeout(setWaypoints, 10);
+      $('.intro').css('display', 'none')
+      // setTimeout(introAnimation, 00);
+      // setTimeout(outroAnimation, 00);
+      setTimeout(setWaypoints, 00);
     } else {
       console.log("no");
       setTimeout(introAnimation, 500);
