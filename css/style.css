@@ -242,8 +242,8 @@ h6.about-credits {
 
 .anchor {
   display: block;
-  height: 75px;
-  margin-top: -75px;
+  height: 60px;
+  margin-top: -60px;
   visibility: hidden;
 }
 
@@ -455,7 +455,6 @@ h6.toggle-text-mobile {
   }
 
   section.project {
-/*    min-height: calc(100vh - 75px);*/
     height: 100%;
     overflow: hidden;
     padding-bottom: 0;
@@ -479,7 +478,6 @@ h6.toggle-text-mobile {
 
   div.project-right {
     width: 100%;
-/*    height: auto;*/
   }
 
   div.my-slider {
