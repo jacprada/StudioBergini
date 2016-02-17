@@ -362,6 +362,18 @@ p.text-right {
   display: none;
 }
 
+p.text-left span.italic,
+p.text-center span.italic,
+p.text-right span.italic {
+  font-style: italic;
+}
+
+p.text-left span.underline,
+p.text-center span.underline,
+p.text-right span.underline {
+  text-decoration: underline;
+}
+
 p.open-menu-text {
   color: #FFFFFF;
 }
