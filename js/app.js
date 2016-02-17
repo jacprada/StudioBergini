@@ -318,9 +318,22 @@ getImageInfo();
   //   });
 
 function addMobileProjectText(sectionId){
-  var textLeft = $('#' + sectionId + ' .text-left').text().slice(0,-6);
-  var textCenter = $('#' + sectionId + ' .text-center').text();
-  var textRight = $('#' + sectionId + ' .text-right').text();
+  var textLeftClone = $('#' + sectionId + ' .text-left').clone();
+  var textCenterClone = $('#' + sectionId + ' .text-center').clone();
+  var textRightClone = $('#' + sectionId + ' .text-right').clone();
+
+  textLeftClone.find('br').replaceWith('\r\n');
+  textCenterClone.find('br').replaceWith('\r\n');
+  textRightClone.find('br').replaceWith('\r\n');
+
+  var textLeftTemp = textLeftClone.text().slice(0,-6);
+  var textCenterTemp = textCenterClone.text();
+  var textRightTemp = textRightClone.text();
+
+  var textLeft = textLeftTemp.replace(/\n/g, "<br />");
+  var textCenter = textCenterTemp.replace(/\n/g, "<br />");
+  var textRight = textRightTemp.replace(/\n/g, "<br />");
+
   $('#' + sectionId + ' .project-mobile').append('<p>'+ textLeft + '</p>' + '<br>' + '<p>'+ textCenter + '</p>'  + '<br>' +  '<p>'+ textRight + '</p>' + '<h6 class="extra-mobile-toggle">(less)</h6>');
 
     $('.extra-mobile-toggle').on('click', function(e) {
