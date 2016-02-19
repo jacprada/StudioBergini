@@ -2,19 +2,7 @@ $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
 
-$(window).on('resize', function(){
-  test();
- $('.sidebar').removeClass('close-menu');
-});
 
-function test(){
-  $('.toggle-text').text('(more)');
-  $('.text-center, .text-right').css('display', 'none');
-  $('.unslider').css('display', 'block');
-  $('.toggle-text').removeClass('read-less');
-  $('.toggle-text').addClass('read-more');
-  setWaypoints()
-}
 
 function introAnimation(){
   $(".intro").css("background-color", "#FFFFFF");
@@ -83,6 +71,20 @@ $(function() {
   // setWaypoints()
   checkForHash();
   checkForMobile();
+
+  $(window).on('resize', function(){
+    test();
+   $('.sidebar').removeClass('close-menu');
+  });
+
+  function test(){
+    $('.toggle-text').text('(more)');
+    $('.text-center, .text-right').css('display', 'none');
+    $('.unslider').css('display', 'block');
+    $('.toggle-text').removeClass('read-less');
+    $('.toggle-text').addClass('read-more');
+    setWaypoints()
+  }
 
 
   function checkForHash() {
