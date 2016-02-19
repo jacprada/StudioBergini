@@ -395,18 +395,18 @@ img {
 }
 
 h1.work-author {
-  padding-left: calc(33.3% + 15px);
+  padding-left: calc(32.8% + 15px);
   color: #000000;
 }
 
 h2.work-title {
-  padding-left: calc(33.3% + 15px);
+  padding-left: calc(32.8% + 15px);
   color: #000000;
   font-style: italic;
 }
 
 h3.work-type {
-  padding-left: calc(33.3% + 15px);
+  padding-left: calc(32.8% + 15px);
   color: #000000;
 }
 
