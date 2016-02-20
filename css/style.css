@@ -332,12 +332,12 @@ h4.image-info {
   color: #000000;
 }
 
-h1.work-author {
+h1.work-title {
   padding-left: calc(32.8% + 15px);
   color: #000000;
 }
 
-h2.work-title {
+h2.work-detail {
   padding-left: calc(32.8% + 15px);
   color: #000000;
   font-style: italic;
@@ -497,12 +497,12 @@ img {
     position: relative;
   }
 
-  h1.work-author {
+  h1.work-title {
     padding-top: 15px;
     padding-left: 0;
   }
 
-  h2.work-title {
+  h2.work-detail {
     padding-left: 0;
   }
 
