@@ -327,6 +327,15 @@ p.text-left {
   color: #000000;
 }
 
+p.text-toggle-more {
+/*  text-align: right;
+  width: 99%;
+  padding-left: 7.5px; 
+  color: #000000;
+  display: none;*/
+}
+
+
 a.toggle-text {
   font-style: italic;
 }
@@ -358,6 +367,14 @@ p.text-center {
 p.text-right {
   width: 49.5%;
   padding-left: 7.5px; 
+  color: #000000;
+  display: none;
+}
+
+p.text-toggle-less {
+  text-align: right;
+  width: 99%;
+/*  padding-left: 7.5px; */
   color: #000000;
   display: none;
 }
@@ -422,7 +439,7 @@ h6.toggle-text-mobile {
 
 /*RESPONSIVE WEBSITE*/
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1250px) {
 
   body.open-menu-main {
     overflow: hidden;

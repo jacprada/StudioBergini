@@ -364,13 +364,34 @@ function addMobileProjectText(sectionId){
 function removeMobileProjectText(sectionId){
   $('#' + sectionId + ' .project-mobile').empty();
 }
-  
-  $('.toggle-text').on('click', function(e) {
-    e.preventDefault();
-    setWaypoints()
-    var sectionId = $(this).parents('section')[0].id;
-    console.log(sectionId)
-    if($(this).hasClass('read-more')) {
+
+$('.toggle-text').on('click', function(e) {
+  e.preventDefault();
+  setWaypoints()
+  var sectionId = $(this).parents('section')[0].id;
+  console.log(sectionId)
+  if($(this).hasClass('read-more')) {
+    $(this).text('(less)');
+    $('#' + sectionId + ' .unslider').css('display', 'none');
+    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block');
+    $(this).removeClass('read-more');
+    $(this).addClass('read-less');
+  } else {
+    $(this).text('(more)');
+    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
+    $('#' + sectionId + ' .unslider').css('display', 'block');
+    $(this).removeClass('read-less');
+    $(this).addClass('read-more');
+  }
+})
+
+
+$('.toggle-text').on('click', function(e) {
+  e.preventDefault();
+  setWaypoints()
+  var sectionId = $(this).parents('section')[0].id;
+  console.log(sectionId)
+  if($(this).hasClass('read-more')) {
     $(this).text('(less)');
     $('#' + sectionId + ' .unslider').css('display', 'none');
     $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block');
