@@ -532,6 +532,11 @@ h6.toggle-text-mobile {
     padding: 0;
   }
 
+  p.text-toggle-more,
+  p.text-toggle-less {
+    display: none;
+  }
+
   div.project-mobile {
     display: block;
     margin: 15px 0 30px 0;
@@ -570,6 +575,11 @@ h6.toggle-text-mobile {
     display: block;
     color: #000000;
     font-style: italic;
+  }
+
+  h6.toggle-text-mobile:hover,
+  h6.extra-mobile-toggle:hover {
+    text-decoration: underline;
   }
 
 }

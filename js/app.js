@@ -367,37 +367,24 @@ function removeMobileProjectText(sectionId){
 
 $('.toggle-more').on('click', function(e) {
   e.preventDefault();
-  setWaypoints()
+  setWaypoints();
   var sectionId = $(this).parents('section')[0].id;
   console.log(sectionId)
-  // $(this).text('(less)');
   $('#' + sectionId + ' .text-toggle-more').css('display', 'none');
   $('#' + sectionId + ' .unslider').css('display', 'none');
   $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block');
   $('#' + sectionId + ' .text-toggle-less').css('display', 'block');
-  // $(this).removeClass('read-more');
-  // $(this).addClass('read-less');
 })
 
 $('.toggle-less').on('click', function(e) {
-  // $(this).text('(more)');
   e.preventDefault();
-  setWaypoints()
+  setWaypoints();
   var sectionId = $(this).parents('section')[0].id;
   $('#' + sectionId + ' .text-toggle-less').css('display', 'none');
   $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
   $('#' + sectionId + ' .unslider').css('display', 'block');
   $('#' + sectionId + ' .text-toggle-more').css('display', 'block');
-  // $(this).removeClass('read-less');
-  // $(this).addClass('read-more');
 })
-
-
-
-
-
-
-
 
 // $('.toggle-text').on('click', function(e) {
 //   e.preventDefault();
