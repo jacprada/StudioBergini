@@ -73,19 +73,17 @@ $(function() {
   checkForMobile();
 
   $(window).on('resize', function(){
-    test();
+    forceTextToggle();
    $('.sidebar').removeClass('close-menu');
   });
 
-  function test(){
-    $('.toggle-text').text('(more)');
+  function forceTextToggle(){
+    $('.text-toggle-less').css('display', 'none');
     $('.text-center, .text-right').css('display', 'none');
     $('.unslider').css('display', 'block');
-    $('.toggle-text').removeClass('read-less');
-    $('.toggle-text').addClass('read-more');
-    setWaypoints()
+    $('.text-toggle-more').css('display', 'block');
+    setWaypoints();
   }
-
 
   function checkForHash() {
     var url = window.location.href;
@@ -235,7 +233,7 @@ getImageInfo();
         element: continuousElements[i],
         handler: function(direction) {
           if(direction == 'up') {
-            if($('#' + this.element.id + ' .toggle-text').hasClass('read-more')) {
+            if($('#' + this.element.id + ' .text-toggle-more').is(':visible')) {
               if($('#' + this.element.id + ' ul .unslider-active img').attr('alt') == undefined) {
                 var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
                 var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
