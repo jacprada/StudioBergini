@@ -223,7 +223,7 @@ $(function() {
     var textLeft = $('#' + sectionId + ' .text-left').html();
     var textCenter = $('#' + sectionId + ' .text-center').html();
     var textRight = $('#' + sectionId + ' .text-right').html();
-    $('#' + sectionId + ' .project-mobile').append(textLeft + textCenter + textRight + '<h6   class="extra-mobile-toggle">(less)</h6>');
+    $('#' + sectionId + ' .project-mobile').append(textLeft + '<br><br>' + textCenter + '<br><br>' + textRight + '<h6 class="extra-mobile-toggle">(less)</h6>');
     $('.extra-mobile-toggle').on('click', function(e) {
       e.preventDefault();
       var sectionId = $(this).parents('section')[0].id;
