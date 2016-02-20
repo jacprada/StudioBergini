@@ -577,11 +577,6 @@ h6.toggle-text-mobile {
     font-style: italic;
   }
 
-  h6.toggle-text-mobile:hover,
-  h6.extra-mobile-toggle:hover {
-    text-decoration: underline;
-  }
-
 }
 
 @media only screen and (max-width: 600px) {
