@@ -210,7 +210,7 @@ getImageInfo();
         element: continuousElements[i],
         handler: function(direction) {
           if(direction == 'down') {
-            if($('#' + this.element.id + ' .toggle-text').hasClass('read-more')) {
+            if($('#' + this.element.id + ' .text-toggle-more').is(':visible')) {
               if($('#' + this.element.id + ' ul .unslider-active img').attr('alt') == undefined) {
                 var imageInfo = ($('#' + this.element.id + ' ul li img').first().attr('alt'));
                 var imageNum = ($('#' + this.element.id + ' ul li img').first().attr('data-num'));
@@ -365,46 +365,59 @@ function removeMobileProjectText(sectionId){
   $('#' + sectionId + ' .project-mobile').empty();
 }
 
-$('.toggle-text').on('click', function(e) {
+$('.toggle-more').on('click', function(e) {
   e.preventDefault();
   setWaypoints()
   var sectionId = $(this).parents('section')[0].id;
   console.log(sectionId)
-  if($(this).hasClass('read-more')) {
-    $(this).text('(less)');
-    $('#' + sectionId + ' .unslider').css('display', 'none');
-    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block');
-    $(this).removeClass('read-more');
-    $(this).addClass('read-less');
-  } else {
-    $(this).text('(more)');
-    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
-    $('#' + sectionId + ' .unslider').css('display', 'block');
-    $(this).removeClass('read-less');
-    $(this).addClass('read-more');
-  }
+  // $(this).text('(less)');
+  $('#' + sectionId + ' .text-toggle-more').css('display', 'none');
+  $('#' + sectionId + ' .unslider').css('display', 'none');
+  $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block');
+  $('#' + sectionId + ' .text-toggle-less').css('display', 'block');
+  // $(this).removeClass('read-more');
+  // $(this).addClass('read-less');
 })
 
-
-$('.toggle-text').on('click', function(e) {
+$('.toggle-less').on('click', function(e) {
+  // $(this).text('(more)');
   e.preventDefault();
   setWaypoints()
   var sectionId = $(this).parents('section')[0].id;
-  console.log(sectionId)
-  if($(this).hasClass('read-more')) {
-    $(this).text('(less)');
-    $('#' + sectionId + ' .unslider').css('display', 'none');
-    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block');
-    $(this).removeClass('read-more');
-    $(this).addClass('read-less');
-  } else {
-    $(this).text('(more)');
-    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
-    $('#' + sectionId + ' .unslider').css('display', 'block');
-    $(this).removeClass('read-less');
-    $(this).addClass('read-more');
-  }
+  $('#' + sectionId + ' .text-toggle-less').css('display', 'none');
+  $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
+  $('#' + sectionId + ' .unslider').css('display', 'block');
+  $('#' + sectionId + ' .text-toggle-more').css('display', 'block');
+  // $(this).removeClass('read-less');
+  // $(this).addClass('read-more');
 })
+
+
+
+
+
+
+
+
+// $('.toggle-text').on('click', function(e) {
+//   e.preventDefault();
+//   setWaypoints()
+//   var sectionId = $(this).parents('section')[0].id;
+//   console.log(sectionId)
+//   if($(this).hasClass('read-more')) {
+//     $(this).text('(less)');
+//     $('#' + sectionId + ' .unslider').css('display', 'none');
+//     $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block');
+//     $(this).removeClass('read-more');
+//     $(this).addClass('read-less');
+//   } else {
+//     $(this).text('(more)');
+//     $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
+//     $('#' + sectionId + ' .unslider').css('display', 'block');
+//     $(this).removeClass('read-less');
+//     $(this).addClass('read-more');
+//   }
+// })
 
     $('.toggle-text-mobile').on('click', function(e) {
       e.preventDefault();

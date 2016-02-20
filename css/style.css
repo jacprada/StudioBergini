@@ -328,6 +328,8 @@ p.text-left {
 }
 
 p.text-toggle-more {
+  position: relative;
+  z-index: 10;
 /*  text-align: right;
   width: 99%;
   padding-left: 7.5px; 
@@ -372,6 +374,8 @@ p.text-right {
 }
 
 p.text-toggle-less {
+  position: relative;
+  z-index: 10;
   text-align: right;
   width: 99%;
 /*  padding-left: 7.5px; */
