@@ -2,8 +2,6 @@ $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
 
-
-
 function introAnimation(){
   $(".intro").css("background-color", "#FFFFFF");
   $(".intro-studio").css("display", "none");
@@ -327,24 +325,60 @@ getImageInfo();
   //       $('html, body').stop();
   //   });
 
+// function addMobileProjectText(sectionId){
+//   var textLeftClone = $('#' + sectionId + ' .text-left').clone();
+//   var textCenterClone = $('#' + sectionId + ' .text-center').clone();
+//   var textRightClone = $('#' + sectionId + ' .text-right').clone();
+
+//   textLeftClone.find('br').replaceWith('\r\n');
+//   textCenterClone.find('br').replaceWith('\r\n');
+//   textRightClone.find('br').replaceWith('\r\n');
+
+//   var textLeftTemp = textLeftClone.text().slice(0,-6);
+//   var textCenterTemp = textCenterClone.text();
+//   var textRightTemp = textRightClone.text();
+
+//   var textLeft = textLeftTemp.replace(/\n/g, "<br />");
+//   var textCenter = textCenterTemp.replace(/\n/g, "<br />");
+//   var textRight = textRightTemp.replace(/\n/g, "<br />");
+
+//   $('#' + sectionId + ' .project-mobile').append('<p>'+ textLeft + '</p>' + '<br>' + '<p>'+ textCenter + '</p>'  + '<br>' +  '<p>'+ textRight + '</p>' + '<h6 class="extra-mobile-toggle">(less)</h6>');
+
+//     $('.extra-mobile-toggle').on('click', function(e) {
+//       e.preventDefault();
+//       var sectionId = $(this).parents('section')[0].id;
+//       var anchorId = $('#' + sectionId).prev()[0].id;
+//       removeMobileProjectText(sectionId);
+//       $('#' + sectionId + ' .toggle-text-mobile').text('(more)');
+//       $('#' + sectionId + ' .toggle-text-mobile').removeClass('read-less-mobile');
+//       $('#' + sectionId + ' .toggle-text-mobile').addClass('read-more-mobile');
+//       var tag = $('#' + anchorId);
+//       $('html,body').animate({scrollTop: tag.offset().top});
+//   })
+// }
+
 function addMobileProjectText(sectionId){
-  var textLeftClone = $('#' + sectionId + ' .text-left').clone();
-  var textCenterClone = $('#' + sectionId + ' .text-center').clone();
-  var textRightClone = $('#' + sectionId + ' .text-right').clone();
+  // var textLeftClone = $('#' + sectionId + ' .text-left').clone();
+  // var textCenterClone = $('#' + sectionId + ' .text-center').clone();
+  // var textRightClone = $('#' + sectionId + ' .text-right').clone();
 
-  textLeftClone.find('br').replaceWith('\r\n');
-  textCenterClone.find('br').replaceWith('\r\n');
-  textRightClone.find('br').replaceWith('\r\n');
+  // textLeftClone.find('br').replaceWith('\r\n');
+  // textCenterClone.find('br').replaceWith('\r\n');
+  // textRightClone.find('br').replaceWith('\r\n');
 
-  var textLeftTemp = textLeftClone.text().slice(0,-6);
-  var textCenterTemp = textCenterClone.text();
-  var textRightTemp = textRightClone.text();
+  // var textLeftTemp = textLeftClone.text().slice(0,-6);
+  // var textCenterTemp = textCenterClone.text();
+  // var textRightTemp = textRightClone.text();
 
-  var textLeft = textLeftTemp.replace(/\n/g, "<br />");
-  var textCenter = textCenterTemp.replace(/\n/g, "<br />");
-  var textRight = textRightTemp.replace(/\n/g, "<br />");
+  // var textLeft = textLeftTemp.replace(/\n/g, "<br />");
+  // var textCenter = textCenterTemp.replace(/\n/g, "<br />");
+  // var textRight = textRightTemp.replace(/\n/g, "<br />");
 
-  $('#' + sectionId + ' .project-mobile').append('<p>'+ textLeft + '</p>' + '<br>' + '<p>'+ textCenter + '</p>'  + '<br>' +  '<p>'+ textRight + '</p>' + '<h6 class="extra-mobile-toggle">(less)</h6>');
+  var textLeft = $('#' + sectionId + ' .text-left').html();
+  var textCenter = $('#' + sectionId + ' .text-center').html();
+  var textRight = $('#' + sectionId + ' .text-right').html();
+
+  $('#' + sectionId + ' .project-mobile').append(textLeft + textCenter + textRight + '<h6 class="extra-mobile-toggle">(less)</h6>');
 
     $('.extra-mobile-toggle').on('click', function(e) {
       e.preventDefault();
