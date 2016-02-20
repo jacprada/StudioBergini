@@ -278,25 +278,6 @@ div.project-mobile {
   display: none;
 }
 
-
-
-h4.image-info {
-  color: #000000;
-}
-
-
-
-
-
-
-a.toggle-text {
-  font-style: italic;
-}
-
-a.toggle-text:hover {
-  text-decoration: underline;
-}
-
 p.text-left {
   padding-right: 7.5px; 
   color: #000000;
@@ -331,7 +312,13 @@ p.text-toggle-less {
   z-index: 10;
 }
 
+a.toggle-text {
+  font-style: italic;
+}
 
+a.toggle-text:hover {
+  text-decoration: underline;
+}
 
 span.italic {
   font-style: italic;
@@ -341,9 +328,9 @@ span.underline {
   text-decoration: underline;
 }
 
-
-
-
+h4.image-info {
+  color: #000000;
+}
 
 h1.work-author {
   padding-left: calc(32.8% + 15px);
@@ -406,7 +393,7 @@ img {
 
 
 
-/* RESPONSIVE WEBSITE */
+/* TABLET SIZE WEBSITE */
 
 @media only screen and (max-width: 1250px) {
 
@@ -414,10 +401,7 @@ img {
     overflow: hidden;
   }
 
-  h1.intro-studio {
-    font-size: 100px;
-  }
-
+  h1.intro-studio,
   h1.intro-bergini {
     font-size: 100px;
   }
@@ -543,6 +527,10 @@ img {
   }
 
 }
+
+
+
+/* MOBILE SIZE WEBSITE */
 
 @media only screen and (max-width: 600px) {
 
