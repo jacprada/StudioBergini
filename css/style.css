@@ -1,19 +1,25 @@
+/* GENERIC */
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   background-color: #FFFFFF;
-  width: 100%;
+  color: #FFFFFF;
   font-family: 'Times New Roman', Serif;
   font-size: 23px;
   line-height: 1.2;
-  color: #fff;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   -webkit-font-smoothing: antialiased;
 }
+
+
+
+/* ANIMATION BLOCK */
 
 header, main {
   display: none;
@@ -34,14 +40,11 @@ h1.intro-studio {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
-/*  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  transition: all 2s;*/
 }
 
 h1.intro-bergini {
-  font-size: 300px;
   display: none;
+  font-size: 300px;
   margin: 0 auto;
   position: relative;
   top: 50%;
@@ -49,10 +52,15 @@ h1.intro-bergini {
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
-/*  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  transition: all 2s;*/
 }
+
+
+/* HEADER & NAVIGATION BLOCK */
+
+
+
+
+
 
 div.sidebar {
   z-index: 25;
