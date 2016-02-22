@@ -325,7 +325,8 @@ span.italic {
 }
 
 span.underline {
-  text-decoration: underline;
+/*  text-decoration: underline;*/
+  border-bottom: 1.5px solid black;
 }
 
 h4.image-info {
@@ -335,12 +336,12 @@ h4.image-info {
 h1.work-title {
   padding-left: calc(32.8% + 15px);
   color: #000000;
+  font-style: italic;
 }
 
 h2.work-detail {
   padding-left: calc(32.8% + 15px);
   color: #000000;
-  font-style: italic;
 }
 
 h3.work-type {
@@ -464,20 +465,20 @@ img {
 
   div.my-slider {
     width: 100%;
-    height: 350px;
+    height: 400px;
   }
 
   div.unslider {
     width: 100%;
-    height: 350px;
+    height: 400px;
   }
 
   a.unslider-arrow {
-      height: 350px;
+      height: 400px;
   }
 
   img {
-    height: 350px;
+    height: 400px;
     padding: 0;
   }
 
@@ -529,15 +530,34 @@ img {
 }
 
 
+@media only screen and (max-width: 850px) {
+
+  div.my-slider {
+    width: 100%;
+    height: 350px;
+  }
+
+  div.unslider {
+    width: 100%;
+    height: 350px;
+  }
+
+  a.unslider-arrow {
+      height: 350px;
+  }
+
+  img {
+    height: 350px;
+    padding: 0;
+  }
+
+}
+
+
 
 /* MOBILE SIZE WEBSITE */
 
 @media only screen and (max-width: 600px) {
-
-  h1.about-contact,
-  p.about-text {
-    font-size: 18px;
-  }
 
   h6.about-credits {
     display: none;
@@ -562,4 +582,8 @@ img {
     padding: 0;
   }
 
+}
+
+#sixth-project {
+  display: none;
 }

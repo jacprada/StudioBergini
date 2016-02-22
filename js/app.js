@@ -243,7 +243,7 @@ $(function() {
 
   $('.my-slider').unslider({
     animation: 'fade',
-    speed: 400
+    speed: 250
   });
 
   $('.prev, .next').on('click', function() {
