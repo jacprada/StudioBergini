@@ -317,7 +317,7 @@ a.toggle-text {
 }
 
 a.toggle-text:hover {
-  text-decoration: underline;
+  border-bottom: 1.5px solid #000000;
 }
 
 span.italic {
