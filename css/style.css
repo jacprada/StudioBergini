@@ -323,6 +323,16 @@ a.text-link:hover {
   border-bottom: 1.75px solid #000000;
 }
 
+a.contact-link {
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+a.contact-link:hover {
+  padding-bottom: 1.25px;
+  border-bottom: 1.75px solid #FFFFFF;
+}
+
 span.italic {
   font-style: italic;
 }
