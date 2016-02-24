@@ -312,12 +312,15 @@ p.text-toggle-less {
   z-index: 10;
 }
 
-a.toggle-text {
+a.toggle-text,
+a.text-link {
   font-style: italic;
 }
 
-a.toggle-text:hover {
-  border-bottom: 1.5px solid #000000;
+a.toggle-text:hover,
+a.text-link:hover {
+  padding-bottom: 1.25px;
+  border-bottom: 1.75px solid #000000;
 }
 
 span.italic {
@@ -325,8 +328,7 @@ span.italic {
 }
 
 span.underline {
-/*  text-decoration: underline;*/
-  border-bottom: 1.5px solid black;
+  border-bottom: 1.75px solid #000000;
 }
 
 h4.image-info {
