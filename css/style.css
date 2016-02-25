@@ -319,8 +319,8 @@ a.text-link {
 
 a.toggle-text:hover,
 a.text-link:hover {
-  padding-bottom: 1.25px;
-  border-bottom: 1.75px solid #000000;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #000000;
 }
 
 a.contact-link {

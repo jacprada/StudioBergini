@@ -1,3 +1,5 @@
+// Go To Line 250 To Change Slider Speed, Just Add Number And Save
+
 $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
@@ -241,9 +243,11 @@ $(function() {
     $('#' + sectionId + ' .project-mobile').empty();
   }
 
+
+  // Change Slider Speed Here
   $('.my-slider').unslider({
     animation: 'fade',
-    speed: 250
+    speed: 350
   });
 
   $('.prev, .next').on('click', function() {
