@@ -16,7 +16,7 @@ body {
   text-align: center;
   background-color: #FFFFFF;
   color: #FFFFFF;
-  font-family: 'Times New Roman', Serif;
+  font-family: 'Times New Roman', Serif !important;
   font-size: 23px;
   line-height: 1.2;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
