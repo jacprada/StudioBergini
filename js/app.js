@@ -4,17 +4,7 @@ $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
 
-$(window).on('resize', function(){
-  var imageHeight = $('.my-slider:first ul li:first img:first').width()
-  $('.slider-background').each(function() {
-    $(this).css("width", imageHeight);
-  });
 
-
-  // forceTextToggle();
-  // $('.sidebar').removeClass('close-menu');
-
-});
 
 function introAnimation(){
   $(".intro").css("background-color", "#FFFFFF");
@@ -78,13 +68,6 @@ function closeMenuMobile() {
   $('.sidebar').addClass('close-menu');
 }
 
-function forceTextToggle(){
-  $('.text-toggle-less').css('display', 'none');
-  $('.text-center, .text-right').css('display', 'none');
-  $('.unslider').css('display', 'block');
-  $('.text-toggle-more').css('display', 'block');
-  setWaypoints();
-}
 
 
 
@@ -98,6 +81,15 @@ $(function() {
     getImageInfo();
   }
 
+  function getImageWidth() {
+    var imageWidth = $('.my-slider:first ul li:first img:first').width();
+    $('.slider-background').each(function() {
+      $(this).css("width", imageWidth);
+    });
+  }
+
+
+
   function checkForHash() {
     var url = window.location.href;
     var hash = "#"
@@ -108,11 +100,13 @@ $(function() {
       $('header').css('display', 'block');
       $('main').css('display', 'block');
       setWaypoints();
+      getImageWidth();
     } else {
       console.log("no");
       setTimeout(introAnimation, 500);
       setTimeout(outroAnimation, 1000);
       setTimeout(setWaypoints, 1000);
+      setTimeout(getImageWidth, 1000);
     }
   }
 
@@ -197,6 +191,24 @@ $(function() {
       })
     }
   }
+
+  $(window).on('resize', function(){
+    var imageWidth = $('.my-slider:first ul li:first img:first').width()
+    $('.slider-background').each(function() {
+      $(this).css("width", imageWidth);
+    });
+    forceTextToggle();
+    $('.sidebar').removeClass('close-menu');
+  });
+
+  function forceTextToggle(){
+    $('.text-toggle-less').css('display', 'none');
+    $('.text-center, .text-right').css('display', 'none');
+    $('.unslider').css('display', 'block');
+    $('.text-toggle-more').css('display', 'block');
+    setWaypoints();
+  }
+
 
   function getImageInfo() {
     var sections = $('section.project');
