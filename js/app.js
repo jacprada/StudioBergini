@@ -5,8 +5,15 @@ $(window).on('beforeunload', function(){
 });
 
 $(window).on('resize', function(){
-  forceTextToggle();
-  $('.sidebar').removeClass('close-menu');
+  var imageHeight = $('.my-slider:first ul li:first img:first').width()
+  $('.slider-background').each(function() {
+    $(this).css("width", imageHeight);
+  });
+
+
+  // forceTextToggle();
+  // $('.sidebar').removeClass('close-menu');
+
 });
 
 function introAnimation(){

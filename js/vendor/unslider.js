@@ -33,7 +33,7 @@
 
 			//  An easing string to use. If you're using Velocity, use a
 			//  Velocity string otherwise you can use jQuery/jQ UI options.
-			easing: 'swing', // [.42, 0, .58, 1],
+			easing: 'easeInOutQuad', // [.42, 0, .58, 1],
 			
 			//  Does it support keyboard arrows?
 			//  Can pass either true or false -
