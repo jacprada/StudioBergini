@@ -1,10 +1,8 @@
-// Go To Line 250 To Change Slider Speed, Just Add Number And Save
+// Go To Line 265 To Change Slider Speed, Just Add Number And Save
 
 $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
-
-
 
 function introAnimation(){
   $(".intro").css("background-color", "#FFFFFF");
@@ -82,12 +80,15 @@ $(function() {
   }
 
   function getImageWidth() {
-    var imageWidth = $('.my-slider:first ul li:first img:first').width();
+    var array = [];
+    $('img').each(function() {
+      array.push(parseFloat($(this).width()))
+    });
+    var imageWidth = Math.min.apply(Math,array);
     $('.slider-background').each(function() {
       $(this).css("width", imageWidth);
     });
   }
-
 
 
   function checkForHash() {
@@ -95,14 +96,12 @@ $(function() {
     var hash = "#"
     var windowWidth = $(window).width()
     if (url.indexOf(hash) >= 0) {
-      console.log("yes");
       $('.intro').css('display', 'none');
       $('header').css('display', 'block');
       $('main').css('display', 'block');
       setWaypoints();
       getImageWidth();
     } else {
-      console.log("no");
       setTimeout(introAnimation, 500);
       setTimeout(outroAnimation, 1000);
       setTimeout(setWaypoints, 1000);
@@ -185,7 +184,6 @@ $(function() {
           }
         },
         offset: function() {
-          console.log(this.element.clientHeight)
           return -(this.element.clientHeight - 75)
         }
       })
@@ -193,10 +191,7 @@ $(function() {
   }
 
   $(window).on('resize', function(){
-    var imageWidth = $('.my-slider:first ul li:first img:first').width()
-    $('.slider-background').each(function() {
-      $(this).css("width", imageWidth);
-    });
+    getImageWidth();
     forceTextToggle();
     $('.sidebar').removeClass('close-menu');
   });
@@ -205,6 +200,7 @@ $(function() {
     $('.text-toggle-less').css('display', 'none');
     $('.text-center, .text-right').css('display', 'none');
     $('.unslider').css('display', 'block');
+    $('.slider-background').css('display', 'block');
     $('.text-toggle-more').css('display', 'block');
     setWaypoints();
   }
@@ -285,9 +281,9 @@ $(function() {
     e.preventDefault();
     setWaypoints();
     var sectionId = $(this).parents('section')[0].id;
-    console.log(sectionId)
     $('#' + sectionId + ' .text-toggle-more').css('display', 'none');
     $('#' + sectionId + ' .unslider').css('display', 'none');
+    $('#' + sectionId + ' .slider-background').css('display', 'none');
     $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block ');
     $('#' + sectionId + ' .text-toggle-less').css('display', 'block');
   })
@@ -299,6 +295,7 @@ $(function() {
     $('#' + sectionId + ' .text-toggle-less').css('display', 'none');
     $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
     $('#' + sectionId + ' .unslider').css('display', 'block');
+    $('#' + sectionId + ' .slider-background').css('display', 'block');
     $('#' + sectionId + ' .text-toggle-more').css('display', 'block');
   })
 
