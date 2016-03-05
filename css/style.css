@@ -189,16 +189,11 @@ div.sidebar.close-menu {
   transition: left 0.5s;
 }
 
-section.about,
-div.about-container {
+section.about {
   height: 100%;
-  padding: 65px 15px 15px 15px;
+  padding: 115px 15px 15px 15px;
   background-color: #000000;
   text-align: left;
-}
-
-div.about-container {
-  overflow-y: scroll;
 }
 
 h1.about-contact {
@@ -212,7 +207,8 @@ p.about-text {
 
 h6.about-credits {
   color: #FFFFFF;
-  padding: 15px 0 0 0;
+  position: absolute;
+  bottom: 15px;
 }
 
 
