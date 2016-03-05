@@ -79,6 +79,32 @@ $(function() {
     getImageInfo();
   }
 
+
+
+  var currentHash = "#initial_hash"
+  $(document).scroll(function () {
+    $('.anchor').each(function () {
+      var top = window.pageYOffset;
+      // console.log(top)
+      // var bottom = $(this).attr('href').height();
+      // console.log($(this).attr('id'))
+      var blala = $('section.project').first()
+      var bottom = blala[0].offsetHeight
+      // console.log(bottom)
+      var distance = top - $(this).offset().top;
+      console.log($(this).offset().top)
+      // var distance = top - bottom;
+      console.log(distance)
+      var hash = $(this).attr('id');
+              // 30 is an arbitrary padding choice, 
+              // if you want a precise check then use distance===0
+      if (distance === 0 && currentHash != hash) {
+                window.location.hash = (hash);
+                currentHash = hash;
+              }
+            });
+  });
+
   function getImageWidth() {
     var array = [];
     $('img').each(function() {
